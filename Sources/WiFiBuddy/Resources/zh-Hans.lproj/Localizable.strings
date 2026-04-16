@@ -1,0 +1,121 @@
+/* App */
+"WiFiBuddy" = "WiFiBuddy";
+
+/* Sidebar */
+"Nearby Wi-Fi" = "附近的 Wi-Fi";
+"Visible" = "可见";
+"Named" = "已命名";
+"Starred" = "已收藏";
+"Sort" = "排序";
+"Change list sorting" = "更改列表排序";
+"Sort By" = "排序方式";
+"Recommended" = "推荐";
+"Signal Strength" = "信号强度";
+"Name (A–Z)" = "名称（A–Z）";
+"Channel" = "信道";
+"Region %@" = "区域 %@";
+
+/* Network row */
+"Starred network" = "已收藏的网络";
+"Currently connected network" = "当前连接的网络";
+"Hidden" = "隐藏";
+"Ch %d" = "信道 %d";
+
+/* Signal Map */
+"Signal Map" = "信号图";
+"%d visible networks" = "%d 个可见网络";
+"%d starred" = "已收藏 %d 个";
+"All Bands" = "全部频段";
+"No Visible Networks" = "未发现网络";
+"Scan again or switch to another frequency filter." = "重新扫描或切换到其他频段过滤器。";
+"Signal Map Unavailable" = "信号图不可用";
+"No Supported Channels" = "无支持的信道";
+"This band isn't available for the current region or this scan didn't return any legal channels to plot." = "当前区域不支持该频段，或本次扫描未返回可绘制的合法信道。";
+"Hover to preview a network, or click a curve to inspect it." = "悬停预览网络，点击曲线查看详情。";
+"Starred networks use a gold outline, while the selected curve carries the strongest emphasis." = "已收藏网络显示金色描边，被选中曲线则使用最强的视觉突出。";
+
+/* Inspector */
+"Select a Wi-Fi Network" = "选择一个 Wi-Fi 网络";
+"Choose a network from the sidebar or click a signal curve to inspect its details." = "从侧栏选择网络，或点击信号曲线查看详细信息。";
+"Live Snapshot" = "实时快照";
+"Network Details" = "网络详情";
+"Observation" = "观测信息";
+"Current Link" = "当前连接";
+"SSID available" = "SSID 可见";
+"SSID hidden" = "SSID 隐藏";
+"Starred" = "已收藏";
+"Owner" = "自有";
+"RSSI" = "RSSI";
+"Noise" = "噪声";
+"SNR" = "信噪比";
+"Center" = "中心频率";
+"Width" = "带宽";
+"Security" = "安全";
+"PHY" = "PHY";
+"SSID" = "SSID";
+"MAC / BSSID" = "MAC / BSSID";
+"Band" = "频段";
+"Center Frequency" = "中心频率";
+"Channel Width" = "信道带宽";
+"PHY Modes" = "PHY 模式";
+"Country Code" = "国家代码";
+"IBSS" = "IBSS";
+"Yes" = "是";
+"No" = "否";
+"Unknown" = "未知";
+"Unavailable" = "不可用";
+"Beacon Interval" = "信标间隔";
+"Information Elements" = "信息元素";
+"Interface" = "接口";
+"Transmit Rate" = "传输速率";
+
+/* Empty states */
+"Preparing Wi-Fi Analyzer" = "正在准备 Wi-Fi 分析器";
+"WiFiBuddy is warming up the scanner and loading your current environment." = "WiFiBuddy 正在启动扫描器并加载当前环境。";
+"Scanning Nearby Networks" = "正在扫描附近网络";
+"The analyzer is collecting nearby channels and access points now." = "分析器正在收集附近的信道和接入点。";
+"No Wi-Fi Interface" = "未发现 Wi-Fi 接口";
+"WiFiBuddy couldn't find a Wi-Fi interface on this Mac." = "WiFiBuddy 未在本机找到 Wi-Fi 接口。";
+"Wi-Fi Is Turned Off" = "Wi-Fi 已关闭";
+"Turn Wi-Fi back on to populate the analyzer and inspector." = "重新开启 Wi-Fi 以填充分析器和检查器。";
+"Scan Failed" = "扫描失败";
+"Run another scan or move to a location with nearby Wi-Fi activity." = "重新扫描或移动到附近有 Wi-Fi 的位置。";
+
+/* Permission card */
+"Reveal Network Names" = "显示网络名称";
+"Refreshing Network Names" = "正在刷新网络名称";
+"Location Access Needed" = "需要定位权限";
+"Location Services Off" = "定位服务已关闭";
+"Allow Access" = "允许访问";
+"Open Settings" = "打开设置";
+"Refreshing…" = "刷新中…";
+"Applying the new permission to the current scan." = "正在将新权限应用到当前扫描。";
+"Location access reveals SSID and BSSID." = "定位权限可显示 SSID 与 BSSID。";
+"WiFiBuddy rescans automatically after access changes." = "权限变更后 WiFiBuddy 会自动重新扫描。";
+
+/* Settings */
+"Settings" = "设置";
+"Preferences" = "偏好设置";
+"Tune scanning cadence and regulatory behavior for WiFiBuddy." = "调整 WiFiBuddy 的扫描频率与合规行为。";
+"Scanning" = "扫描";
+"Scan Interval" = "扫描间隔";
+"How often WiFiBuddy re-scans nearby access points." = "WiFiBuddy 重新扫描附近接入点的频率。";
+"%d sec" = "%d 秒";
+"Include Hidden Networks" = "包含隐藏网络";
+"Show networks that don't broadcast an SSID." = "显示不广播 SSID 的网络。";
+"Region & Compliance" = "区域与合规";
+"Region Override" = "区域覆盖";
+"Automatic" = "自动";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "除非需要模拟其他监管区域，请使用"自动"。WiFiBuddy 仍会把所选策略与本机支持的信道取交集。";
+"Done" = "完成";
+
+/* Toolbar */
+"Run a new Wi-Fi scan now" = "立即重新扫描 Wi-Fi";
+"Open WiFiBuddy settings" = "打开 WiFiBuddy 设置";
+
+/* Language card */
+"Language" = "语言";
+"Display Language" = "显示语言";
+"Changes take effect the next time WiFiBuddy launches." = "更改将在下次启动 WiFiBuddy 时生效。";
+"System Default" = "跟随系统";
+"English" = "English";

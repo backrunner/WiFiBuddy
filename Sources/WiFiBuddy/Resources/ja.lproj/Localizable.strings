@@ -1,0 +1,121 @@
+/* App */
+"WiFiBuddy" = "WiFiBuddy";
+
+/* Sidebar */
+"Nearby Wi-Fi" = "近くの Wi-Fi";
+"Visible" = "検出";
+"Named" = "識別済み";
+"Starred" = "スター";
+"Sort" = "並び替え";
+"Change list sorting" = "リストの並び替えを変更";
+"Sort By" = "並び替え基準";
+"Recommended" = "おすすめ";
+"Signal Strength" = "信号強度";
+"Name (A–Z)" = "名前（A–Z）";
+"Channel" = "チャネル";
+"Region %@" = "地域 %@";
+
+/* Network row */
+"Starred network" = "スター付きネットワーク";
+"Currently connected network" = "現在接続中のネットワーク";
+"Hidden" = "非公開";
+"Ch %d" = "Ch %d";
+
+/* Signal Map */
+"Signal Map" = "シグナルマップ";
+"%d visible networks" = "%d 件のネットワーク";
+"%d starred" = "スター %d 件";
+"All Bands" = "全バンド";
+"No Visible Networks" = "ネットワークが見つかりません";
+"Scan again or switch to another frequency filter." = "再スキャンするか、別のバンドフィルタに切り替えてください。";
+"Signal Map Unavailable" = "シグナルマップを表示できません";
+"No Supported Channels" = "対応チャネルがありません";
+"This band isn't available for the current region or this scan didn't return any legal channels to plot." = "現在の地域では利用できないバンド、または描画可能な合法チャネルが取得できませんでした。";
+"Hover to preview a network, or click a curve to inspect it." = "ホバーでプレビュー、曲線をクリックして詳細を表示します。";
+"Starred networks use a gold outline, while the selected curve carries the strongest emphasis." = "スター付きは金色の輪郭、選択中の曲線は最も強く強調されます。";
+
+/* Inspector */
+"Select a Wi-Fi Network" = "Wi-Fi ネットワークを選択";
+"Choose a network from the sidebar or click a signal curve to inspect its details." = "サイドバーから選ぶか、信号曲線をクリックして詳細を確認してください。";
+"Live Snapshot" = "ライブ情報";
+"Network Details" = "ネットワーク詳細";
+"Observation" = "観測情報";
+"Current Link" = "現在の接続";
+"SSID available" = "SSID あり";
+"SSID hidden" = "SSID 非公開";
+"Starred" = "スター";
+"Owner" = "自分";
+"RSSI" = "RSSI";
+"Noise" = "ノイズ";
+"SNR" = "SNR";
+"Center" = "中心";
+"Width" = "幅";
+"Security" = "セキュリティ";
+"PHY" = "PHY";
+"SSID" = "SSID";
+"MAC / BSSID" = "MAC / BSSID";
+"Band" = "バンド";
+"Center Frequency" = "中心周波数";
+"Channel Width" = "チャネル幅";
+"PHY Modes" = "PHY モード";
+"Country Code" = "国コード";
+"IBSS" = "IBSS";
+"Yes" = "はい";
+"No" = "いいえ";
+"Unknown" = "不明";
+"Unavailable" = "利用不可";
+"Beacon Interval" = "ビーコン間隔";
+"Information Elements" = "インフォメーション要素";
+"Interface" = "インターフェイス";
+"Transmit Rate" = "送信レート";
+
+/* Empty states */
+"Preparing Wi-Fi Analyzer" = "Wi-Fi アナライザーを準備中";
+"WiFiBuddy is warming up the scanner and loading your current environment." = "WiFiBuddy がスキャナーを起動し、現在の環境を読み込んでいます。";
+"Scanning Nearby Networks" = "近くのネットワークをスキャン中";
+"The analyzer is collecting nearby channels and access points now." = "アナライザーが近くのチャネルとアクセスポイントを収集しています。";
+"No Wi-Fi Interface" = "Wi-Fi インターフェイスが見つかりません";
+"WiFiBuddy couldn't find a Wi-Fi interface on this Mac." = "この Mac で Wi-Fi インターフェイスを検出できませんでした。";
+"Wi-Fi Is Turned Off" = "Wi-Fi がオフです";
+"Turn Wi-Fi back on to populate the analyzer and inspector." = "Wi-Fi をオンにするとアナライザーと詳細が表示されます。";
+"Scan Failed" = "スキャンに失敗しました";
+"Run another scan or move to a location with nearby Wi-Fi activity." = "再スキャンするか、Wi-Fi のある場所に移動してください。";
+
+/* Permission card */
+"Reveal Network Names" = "ネットワーク名を表示";
+"Refreshing Network Names" = "ネットワーク名を更新中";
+"Location Access Needed" = "位置情報の許可が必要";
+"Location Services Off" = "位置情報サービスがオフ";
+"Allow Access" = "アクセスを許可";
+"Open Settings" = "設定を開く";
+"Refreshing…" = "更新中…";
+"Applying the new permission to the current scan." = "新しい権限を現在のスキャンに適用しています。";
+"Location access reveals SSID and BSSID." = "位置情報の許可で SSID と BSSID が表示されます。";
+"WiFiBuddy rescans automatically after access changes." = "権限変更後、WiFiBuddy は自動的に再スキャンします。";
+
+/* Settings */
+"Settings" = "設定";
+"Preferences" = "環境設定";
+"Tune scanning cadence and regulatory behavior for WiFiBuddy." = "WiFiBuddy のスキャン間隔と規制動作を調整します。";
+"Scanning" = "スキャン";
+"Scan Interval" = "スキャン間隔";
+"How often WiFiBuddy re-scans nearby access points." = "WiFiBuddy が近くの AP を再スキャンする頻度です。";
+"%d sec" = "%d 秒";
+"Include Hidden Networks" = "非公開ネットワークも表示";
+"Show networks that don't broadcast an SSID." = "SSID をブロードキャストしないネットワークも表示します。";
+"Region & Compliance" = "地域と規制";
+"Region Override" = "地域の上書き";
+"Automatic" = "自動";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "別の規制ドメインをシミュレートする必要がない限り「自動」をご利用ください。WiFiBuddy は選択ポリシーとこの Mac の対応チャネルの共通部分を使用します。";
+"Done" = "完了";
+
+/* Toolbar */
+"Run a new Wi-Fi scan now" = "Wi-Fi を今すぐスキャン";
+"Open WiFiBuddy settings" = "WiFiBuddy の設定を開く";
+
+/* Language card */
+"Language" = "言語";
+"Display Language" = "表示言語";
+"Changes take effect the next time WiFiBuddy launches." = "次回の WiFiBuddy 起動時に反映されます。";
+"System Default" = "システム設定";
+"English" = "English";

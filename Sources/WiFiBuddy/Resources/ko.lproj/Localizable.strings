@@ -1,0 +1,121 @@
+/* App */
+"WiFiBuddy" = "WiFiBuddy";
+
+/* Sidebar */
+"Nearby Wi-Fi" = "주변 Wi-Fi";
+"Visible" = "감지됨";
+"Named" = "이름 있음";
+"Starred" = "즐겨찾기";
+"Sort" = "정렬";
+"Change list sorting" = "목록 정렬 변경";
+"Sort By" = "정렬 기준";
+"Recommended" = "추천";
+"Signal Strength" = "신호 세기";
+"Name (A–Z)" = "이름 (A–Z)";
+"Channel" = "채널";
+"Region %@" = "지역 %@";
+
+/* Network row */
+"Starred network" = "즐겨찾기한 네트워크";
+"Currently connected network" = "현재 연결된 네트워크";
+"Hidden" = "숨김";
+"Ch %d" = "Ch %d";
+
+/* Signal Map */
+"Signal Map" = "신호 맵";
+"%d visible networks" = "감지된 네트워크 %d개";
+"%d starred" = "즐겨찾기 %d개";
+"All Bands" = "모든 대역";
+"No Visible Networks" = "네트워크를 찾을 수 없음";
+"Scan again or switch to another frequency filter." = "다시 스캔하거나 다른 대역 필터로 전환하세요.";
+"Signal Map Unavailable" = "신호 맵을 사용할 수 없음";
+"No Supported Channels" = "지원되는 채널이 없음";
+"This band isn't available for the current region or this scan didn't return any legal channels to plot." = "현재 지역에서 사용할 수 없는 대역이거나, 그릴 수 있는 합법 채널이 없습니다.";
+"Hover to preview a network, or click a curve to inspect it." = "마우스를 올려 미리보기, 곡선을 클릭해 상세 보기.";
+"Starred networks use a gold outline, while the selected curve carries the strongest emphasis." = "즐겨찾기 네트워크는 금색 테두리, 선택된 곡선이 가장 강조됩니다.";
+
+/* Inspector */
+"Select a Wi-Fi Network" = "Wi-Fi 네트워크 선택";
+"Choose a network from the sidebar or click a signal curve to inspect its details." = "사이드바에서 선택하거나 신호 곡선을 클릭하세요.";
+"Live Snapshot" = "실시간 스냅샷";
+"Network Details" = "네트워크 세부 정보";
+"Observation" = "관측 정보";
+"Current Link" = "현재 연결";
+"SSID available" = "SSID 표시됨";
+"SSID hidden" = "SSID 숨김";
+"Starred" = "즐겨찾기";
+"Owner" = "내 네트워크";
+"RSSI" = "RSSI";
+"Noise" = "잡음";
+"SNR" = "SNR";
+"Center" = "중심";
+"Width" = "대역폭";
+"Security" = "보안";
+"PHY" = "PHY";
+"SSID" = "SSID";
+"MAC / BSSID" = "MAC / BSSID";
+"Band" = "대역";
+"Center Frequency" = "중심 주파수";
+"Channel Width" = "채널 대역폭";
+"PHY Modes" = "PHY 모드";
+"Country Code" = "국가 코드";
+"IBSS" = "IBSS";
+"Yes" = "예";
+"No" = "아니오";
+"Unknown" = "알 수 없음";
+"Unavailable" = "사용 불가";
+"Beacon Interval" = "비콘 간격";
+"Information Elements" = "정보 요소";
+"Interface" = "인터페이스";
+"Transmit Rate" = "전송 속도";
+
+/* Empty states */
+"Preparing Wi-Fi Analyzer" = "Wi-Fi 분석기 준비 중";
+"WiFiBuddy is warming up the scanner and loading your current environment." = "WiFiBuddy가 스캐너를 시작하고 현재 환경을 불러오는 중입니다.";
+"Scanning Nearby Networks" = "주변 네트워크 스캔 중";
+"The analyzer is collecting nearby channels and access points now." = "분석기가 주변 채널과 액세스 포인트를 수집하고 있습니다.";
+"No Wi-Fi Interface" = "Wi-Fi 인터페이스 없음";
+"WiFiBuddy couldn't find a Wi-Fi interface on this Mac." = "이 Mac에서 Wi-Fi 인터페이스를 찾을 수 없습니다.";
+"Wi-Fi Is Turned Off" = "Wi-Fi 꺼짐";
+"Turn Wi-Fi back on to populate the analyzer and inspector." = "Wi-Fi를 켜면 분석기와 세부 정보가 표시됩니다.";
+"Scan Failed" = "스캔 실패";
+"Run another scan or move to a location with nearby Wi-Fi activity." = "다시 스캔하거나 Wi-Fi가 있는 위치로 이동하세요.";
+
+/* Permission card */
+"Reveal Network Names" = "네트워크 이름 표시";
+"Refreshing Network Names" = "네트워크 이름 새로고침 중";
+"Location Access Needed" = "위치 권한이 필요합니다";
+"Location Services Off" = "위치 서비스 꺼짐";
+"Allow Access" = "접근 허용";
+"Open Settings" = "설정 열기";
+"Refreshing…" = "새로고침 중…";
+"Applying the new permission to the current scan." = "새 권한을 현재 스캔에 적용하는 중입니다.";
+"Location access reveals SSID and BSSID." = "위치 권한을 허용하면 SSID와 BSSID가 표시됩니다.";
+"WiFiBuddy rescans automatically after access changes." = "권한이 바뀌면 WiFiBuddy가 자동으로 다시 스캔합니다.";
+
+/* Settings */
+"Settings" = "설정";
+"Preferences" = "환경설정";
+"Tune scanning cadence and regulatory behavior for WiFiBuddy." = "WiFiBuddy의 스캔 주기와 규정 동작을 조정합니다.";
+"Scanning" = "스캔";
+"Scan Interval" = "스캔 간격";
+"How often WiFiBuddy re-scans nearby access points." = "WiFiBuddy가 주변 AP를 다시 스캔하는 주기입니다.";
+"%d sec" = "%d 초";
+"Include Hidden Networks" = "숨김 네트워크 포함";
+"Show networks that don't broadcast an SSID." = "SSID를 브로드캐스트하지 않는 네트워크도 표시합니다.";
+"Region & Compliance" = "지역 및 규정";
+"Region Override" = "지역 재정의";
+"Automatic" = "자동";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "다른 규제 영역을 시뮬레이션할 필요가 없다면 '자동'을 사용하세요. WiFiBuddy는 선택한 정책과 이 Mac이 지원하는 채널의 교집합을 사용합니다.";
+"Done" = "완료";
+
+/* Toolbar */
+"Run a new Wi-Fi scan now" = "지금 다시 Wi-Fi 스캔";
+"Open WiFiBuddy settings" = "WiFiBuddy 설정 열기";
+
+/* Language card */
+"Language" = "언어";
+"Display Language" = "표시 언어";
+"Changes take effect the next time WiFiBuddy launches." = "다음에 WiFiBuddy를 실행할 때 적용됩니다.";
+"System Default" = "시스템 기본값";
+"English" = "English";

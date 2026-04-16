@@ -1,0 +1,550 @@
+{
+  "generatedAt": "2026-04-17",
+  "policies": [
+    {
+      "countryCode": "ZZ",
+      "displayName": "Global Conservative Default",
+      "notes": [
+        "This policy is used when WiFiBuddy can't determine the local regulatory domain.",
+        "6 GHz recommendations are disabled until a known region policy is available."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "conservative"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,149,153,157,161,165],
+          "dfsChannels": [],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "conservative"
+        },
+        {
+          "band": "6GHz",
+          "channels": [],
+          "dfsChannels": [],
+          "preferredWidths": [],
+          "recommendationMode": "unsupported"
+        }
+      ]
+    },
+    {
+      "countryCode": "US",
+      "displayName": "United States",
+      "notes": [
+        "6 GHz recommendations assume Wi-Fi 6E/7 capable hardware and current regional allowances.",
+        "DFS channels can offer cleaner airspace, but some routers may prefer non-DFS for stability."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93,97,101,105,109,113,117,121,125,129,133,137,141,145,149,153,157,161,165,169,173,177,181,185,189,193,197,201,205,209,213,217,221,225,229,233],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "CA",
+      "displayName": "Canada",
+      "notes": [
+        "Canadian allocations mirror the United States for Wi-Fi 5/6/6E."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93,97,101,105,109,113,117,121,125,129,133,137,141,145,149,153,157,161,165,169,173,177,181,185,189,193,197,201,205,209,213,217,221,225,229,233],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "EU",
+      "displayName": "European Union (ETSI)",
+      "notes": [
+        "Covers the general ETSI allocation adopted by most EU member states.",
+        "6 GHz lower band (5925-6425 MHz) is permitted for low-power indoor use."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "GB",
+      "displayName": "United Kingdom",
+      "notes": [
+        "Ofcom allocations closely follow the ETSI baseline."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "DE",
+      "displayName": "Germany",
+      "notes": [
+        "Follows ETSI allocations."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "FR",
+      "displayName": "France",
+      "notes": [
+        "Follows ETSI allocations."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "JP",
+      "displayName": "Japan",
+      "notes": [
+        "Includes channel 14 on 2.4 GHz for 802.11b only; WiFiBuddy keeps recommendations to 1-13.",
+        "6 GHz (5925-6425 MHz) authorized for low-power indoor use."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "KR",
+      "displayName": "South Korea",
+      "notes": [
+        "KCC allocations include the 6 GHz lower band for low-power indoor operation."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "CN",
+      "displayName": "China Mainland",
+      "notes": [
+        "China currently allocates 6 GHz spectrum differently from Wi-Fi 6E/7 regions.",
+        "WiFiBuddy disables 6 GHz channel recommendations by default for China."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [],
+          "dfsChannels": [],
+          "preferredWidths": [],
+          "recommendationMode": "unsupported"
+        }
+      ]
+    },
+    {
+      "countryCode": "HK",
+      "displayName": "Hong Kong SAR",
+      "notes": [
+        "OFCA aligns broadly with ETSI."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "TW",
+      "displayName": "Taiwan",
+      "notes": [
+        "NCC allocations broadly track ETSI with limited DFS."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "SG",
+      "displayName": "Singapore",
+      "notes": [
+        "IMDA aligns with ETSI."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "IN",
+      "displayName": "India",
+      "notes": [
+        "WPC has opened the 6 GHz lower band for low-power indoor Wi-Fi."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "AU",
+      "displayName": "Australia",
+      "notes": [
+        "ACMA has authorized 6 GHz lower band for low-power indoor operation."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "NZ",
+      "displayName": "New Zealand",
+      "notes": [
+        "RSM allocations mirror Australia."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "BR",
+      "displayName": "Brazil",
+      "notes": [
+        "Anatel has authorized the full 6 GHz band for low-power indoor operation."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93,97,101,105,109,113,117,121,125,129,133,137,141,145,149,153,157,161,165,169,173,177,181,185,189,193,197,201,205,209,213,217,221,225,229,233],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    },
+    {
+      "countryCode": "MX",
+      "displayName": "Mexico",
+      "notes": [
+        "IFT generally mirrors US allocations."
+      ],
+      "bands": [
+        {
+          "band": "2.4GHz",
+          "channels": [1,2,3,4,5,6,7,8,9,10,11],
+          "dfsChannels": [],
+          "preferredWidths": [20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "5GHz",
+          "channels": [36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165],
+          "dfsChannels": [52,56,60,64,100,104,108,112,116,120,124,128,132,136,140],
+          "preferredWidths": [80,40,20],
+          "recommendationMode": "normal"
+        },
+        {
+          "band": "6GHz",
+          "channels": [1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93,97,101,105,109,113,117,121,125,129,133,137,141,145,149,153,157,161,165,169,173,177,181,185,189,193,197,201,205,209,213,217,221,225,229,233],
+          "dfsChannels": [],
+          "preferredWidths": [160,80,40],
+          "recommendationMode": "normal"
+        }
+      ]
+    }
+  ]
+}

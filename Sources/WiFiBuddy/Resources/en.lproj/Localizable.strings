@@ -1,0 +1,121 @@
+/* App */
+"WiFiBuddy" = "WiFiBuddy";
+
+/* Sidebar */
+"Nearby Wi-Fi" = "Nearby Wi-Fi";
+"Visible" = "Visible";
+"Named" = "Named";
+"Starred" = "Starred";
+"Sort" = "Sort";
+"Change list sorting" = "Change list sorting";
+"Sort By" = "Sort By";
+"Recommended" = "Recommended";
+"Signal Strength" = "Signal Strength";
+"Name (A–Z)" = "Name (A–Z)";
+"Channel" = "Channel";
+"Region %@" = "Region %@";
+
+/* Network row */
+"Starred network" = "Starred network";
+"Currently connected network" = "Currently connected network";
+"Hidden" = "Hidden";
+"Ch %d" = "Ch %d";
+
+/* Signal Map */
+"Signal Map" = "Signal Map";
+"%d visible networks" = "%d visible networks";
+"%d starred" = "%d starred";
+"All Bands" = "All Bands";
+"No Visible Networks" = "No Visible Networks";
+"Scan again or switch to another frequency filter." = "Scan again or switch to another frequency filter.";
+"Signal Map Unavailable" = "Signal Map Unavailable";
+"No Supported Channels" = "No Supported Channels";
+"This band isn't available for the current region or this scan didn't return any legal channels to plot." = "This band isn't available for the current region or this scan didn't return any legal channels to plot.";
+"Hover to preview a network, or click a curve to inspect it." = "Hover to preview a network, or click a curve to inspect it.";
+"Starred networks use a gold outline, while the selected curve carries the strongest emphasis." = "Starred networks use a gold outline, while the selected curve carries the strongest emphasis.";
+
+/* Inspector */
+"Select a Wi-Fi Network" = "Select a Wi-Fi Network";
+"Choose a network from the sidebar or click a signal curve to inspect its details." = "Choose a network from the sidebar or click a signal curve to inspect its details.";
+"Live Snapshot" = "Live Snapshot";
+"Network Details" = "Network Details";
+"Observation" = "Observation";
+"Current Link" = "Current Link";
+"SSID available" = "SSID available";
+"SSID hidden" = "SSID hidden";
+"Starred" = "Starred";
+"Owner" = "Owner";
+"RSSI" = "RSSI";
+"Noise" = "Noise";
+"SNR" = "SNR";
+"Center" = "Center";
+"Width" = "Width";
+"Security" = "Security";
+"PHY" = "PHY";
+"SSID" = "SSID";
+"MAC / BSSID" = "MAC / BSSID";
+"Band" = "Band";
+"Center Frequency" = "Center Frequency";
+"Channel Width" = "Channel Width";
+"PHY Modes" = "PHY Modes";
+"Country Code" = "Country Code";
+"IBSS" = "IBSS";
+"Yes" = "Yes";
+"No" = "No";
+"Unknown" = "Unknown";
+"Unavailable" = "Unavailable";
+"Beacon Interval" = "Beacon Interval";
+"Information Elements" = "Information Elements";
+"Interface" = "Interface";
+"Transmit Rate" = "Transmit Rate";
+
+/* Empty states */
+"Preparing Wi-Fi Analyzer" = "Preparing Wi-Fi Analyzer";
+"WiFiBuddy is warming up the scanner and loading your current environment." = "WiFiBuddy is warming up the scanner and loading your current environment.";
+"Scanning Nearby Networks" = "Scanning Nearby Networks";
+"The analyzer is collecting nearby channels and access points now." = "The analyzer is collecting nearby channels and access points now.";
+"No Wi-Fi Interface" = "No Wi-Fi Interface";
+"WiFiBuddy couldn't find a Wi-Fi interface on this Mac." = "WiFiBuddy couldn't find a Wi-Fi interface on this Mac.";
+"Wi-Fi Is Turned Off" = "Wi-Fi Is Turned Off";
+"Turn Wi-Fi back on to populate the analyzer and inspector." = "Turn Wi-Fi back on to populate the analyzer and inspector.";
+"Scan Failed" = "Scan Failed";
+"Run another scan or move to a location with nearby Wi-Fi activity." = "Run another scan or move to a location with nearby Wi-Fi activity.";
+
+/* Permission card */
+"Reveal Network Names" = "Reveal Network Names";
+"Refreshing Network Names" = "Refreshing Network Names";
+"Location Access Needed" = "Location Access Needed";
+"Location Services Off" = "Location Services Off";
+"Allow Access" = "Allow Access";
+"Open Settings" = "Open Settings";
+"Refreshing…" = "Refreshing…";
+"Applying the new permission to the current scan." = "Applying the new permission to the current scan.";
+"Location access reveals SSID and BSSID." = "Location access reveals SSID and BSSID.";
+"WiFiBuddy rescans automatically after access changes." = "WiFiBuddy rescans automatically after access changes.";
+
+/* Settings */
+"Settings" = "Settings";
+"Preferences" = "Preferences";
+"Tune scanning cadence and regulatory behavior for WiFiBuddy." = "Tune scanning cadence and regulatory behavior for WiFiBuddy.";
+"Scanning" = "Scanning";
+"Scan Interval" = "Scan Interval";
+"How often WiFiBuddy re-scans nearby access points." = "How often WiFiBuddy re-scans nearby access points.";
+"%d sec" = "%d sec";
+"Include Hidden Networks" = "Include Hidden Networks";
+"Show networks that don't broadcast an SSID." = "Show networks that don't broadcast an SSID.";
+"Region & Compliance" = "Region & Compliance";
+"Region Override" = "Region Override";
+"Automatic" = "Automatic";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels.";
+"Done" = "Done";
+
+/* Toolbar */
+"Run a new Wi-Fi scan now" = "Run a new Wi-Fi scan now";
+"Open WiFiBuddy settings" = "Open WiFiBuddy settings";
+
+/* Language card */
+"Language" = "Language";
+"Display Language" = "Display Language";
+"Changes take effect the next time WiFiBuddy launches." = "Changes take effect the next time WiFiBuddy launches.";
+"System Default" = "System Default";
+"English" = "English";
