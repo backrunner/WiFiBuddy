@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+APP_NAME=${APP_NAME:-WiFiBuddy}
+APP_BUNDLE="${ROOT_DIR}/build/${APP_NAME}.app"
+
+if [[ ! -d "${APP_BUNDLE}" ]]; then
+  echo "ERROR: ${APP_BUNDLE} does not exist. Run Scripts/package_app.sh first." >&2
+  exit 1
+fi
+
+open "${APP_BUNDLE}"
