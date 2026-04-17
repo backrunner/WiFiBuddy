@@ -17,7 +17,7 @@ it shipped with the OS.
 
 <br />
 
-<!-- Replace with an actual hero screenshot once available. -->
+<!-- Hero: a full shot of the main window at launch. -->
 <img src="docs/screenshots/hero.png" alt="WiFiBuddy main window" width="900" />
 
 </div>
@@ -41,17 +41,17 @@ it shipped with the OS.
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/main.png" alt="Main window" width="420" />
-  <img src="docs/screenshots/inspector.png" alt="Inspector panel" width="420" />
+  <img src="docs/screenshots/main.png" alt="Main window" width="860" />
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/signal-map.png" alt="Signal map close-up" width="420" />
-  <img src="docs/screenshots/settings.png" alt="Settings" width="420" />
+  <img src="docs/screenshots/signal-map.png" alt="Signal Map close-up" width="420" />
+  <img src="docs/screenshots/inspector.png" alt="Network Detail inspector" width="420" />
 </p>
 
-> _Drop PNGs into `docs/screenshots/` with the names above to populate this
-> section. Light mode + Dark mode variants look best side-by-side._
+<p align="center">
+  <img src="docs/screenshots/sidebar.png" alt="Nearby Wi-Fi sidebar" width="280" />
+</p>
 
 ---
 
