@@ -43,11 +43,73 @@ final class RegionPolicyService {
     }
 
     private func loadFromBundle() {
-        guard let url = Bundle.module.url(forResource: "region_policies", withExtension: "json"),
+        guard let url = RegionPolicyResourceLocator.policyDocumentURL(),
               let data = try? Data(contentsOf: url),
               let decoded = try? JSONDecoder().decode(RegionPolicyDocument.self, from: data) else {
             return
         }
         document = decoded
     }
+}
+
+private enum RegionPolicyResourceLocator {
+    private static let bundleName = "WiFiBuddy_WiFiBuddy.bundle"
+    private static let fileName = "region_policies.json"
+
+    static func policyDocumentURL() -> URL? {
+        let fileManager = FileManager.default
+
+        for directory in candidateDirectories() {
+            let directFile = directory.appendingPathComponent(fileName, isDirectory: false)
+            if fileManager.fileExists(atPath: directFile.path) {
+                return directFile
+            }
+
+            let bundledFile = directory
+                .appendingPathComponent(bundleName, isDirectory: true)
+                .appendingPathComponent(fileName, isDirectory: false)
+            if fileManager.fileExists(atPath: bundledFile.path) {
+                return bundledFile
+            }
+        }
+
+        return nil
+    }
+
+    private static func candidateDirectories() -> [URL] {
+        let probeBundles = [
+            Bundle.main,
+            Bundle(for: ResourceProbe.self)
+        ]
+
+        var directories: [URL] = []
+        var seenPaths = Set<String>()
+
+        func appendHierarchy(startingAt url: URL?) {
+            guard var current = url?.standardizedFileURL else { return }
+
+            for _ in 0..<8 {
+                let path = current.path
+                if seenPaths.insert(path).inserted {
+                    directories.append(current)
+                }
+
+                let parent = current.deletingLastPathComponent()
+                if parent.path == current.path {
+                    break
+                }
+                current = parent
+            }
+        }
+
+        for bundle in probeBundles {
+            appendHierarchy(startingAt: bundle.resourceURL)
+            appendHierarchy(startingAt: bundle.bundleURL)
+            appendHierarchy(startingAt: bundle.executableURL?.deletingLastPathComponent())
+        }
+
+        return directories
+    }
+
+    private final class ResourceProbe: NSObject {}
 }
