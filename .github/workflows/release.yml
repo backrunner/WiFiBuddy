@@ -15,6 +15,9 @@ concurrency:
   group: release-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build & package
@@ -68,7 +71,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: build/*.dmg
-          generate_release_notes: true
           # SemVer prerelease tags (anything containing '-', e.g. v0.2.0-beta.1
           # or v0.2.0-rc.1) are published as a GitHub Prerelease and are not
           # marked as the latest release. Plain tags (v0.2.0) are the "latest".
