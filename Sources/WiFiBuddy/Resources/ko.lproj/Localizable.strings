@@ -97,6 +97,11 @@
 "Settings" = "설정";
 "Preferences" = "환경설정";
 "Tune scanning cadence and regulatory behavior for WiFiBuddy." = "WiFiBuddy의 스캔 주기와 규정 동작을 조정합니다.";
+"Appearance" = "화면 모드";
+"Theme" = "테마";
+"Follow System" = "시스템 설정";
+"Light" = "라이트";
+"Dark" = "다크";
 "Scanning" = "스캔";
 "Scan Interval" = "스캔 간격";
 "How often WiFiBuddy re-scans nearby access points." = "WiFiBuddy가 주변 AP를 다시 스캔하는 주기입니다.";

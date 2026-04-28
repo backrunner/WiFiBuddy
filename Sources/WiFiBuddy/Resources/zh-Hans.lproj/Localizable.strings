@@ -97,6 +97,11 @@
 "Settings" = "设置";
 "Preferences" = "偏好设置";
 "Tune scanning cadence and regulatory behavior for WiFiBuddy." = "调整 WiFiBuddy 的扫描频率与合规行为。";
+"Appearance" = "外观";
+"Theme" = "主题";
+"Follow System" = "跟随系统";
+"Light" = "亮色";
+"Dark" = "暗色";
 "Scanning" = "扫描";
 "Scan Interval" = "扫描间隔";
 "How often WiFiBuddy re-scans nearby access points." = "WiFiBuddy 重新扫描附近接入点的频率。";

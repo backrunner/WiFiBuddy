@@ -50,6 +50,30 @@ enum WiFiSortMode: String, CaseIterable, Identifiable, Sendable {
     }
 }
 
+enum AppAppearanceMode: String, CaseIterable, Identifiable, Sendable {
+    case system
+    case light
+    case dark
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .system: "Follow System"
+        case .light: "Light"
+        case .dark: "Dark"
+        }
+    }
+
+    var colorScheme: ColorScheme? {
+        switch self {
+        case .system: nil
+        case .light: .light
+        case .dark: .dark
+        }
+    }
+}
+
 @MainActor
 @Observable
 final class AppNavigationModel {
@@ -78,6 +102,10 @@ final class AppSettingsModel {
         didSet { save() }
     }
 
+    var appearanceMode: AppAppearanceMode = .system {
+        didSet { save() }
+    }
+
     var regionOverrideCode = "" {
         didSet { save() }
     }
@@ -95,6 +123,9 @@ final class AppSettingsModel {
     func load() {
         scanInterval = defaults.object(forKey: "settings.scanInterval") as? Double ?? 15
         includeHiddenNetworks = defaults.object(forKey: "settings.includeHiddenNetworks") as? Bool ?? false
+        appearanceMode = AppAppearanceMode(
+            rawValue: defaults.string(forKey: "settings.appearanceMode") ?? ""
+        ) ?? .system
         regionOverrideCode = defaults.string(forKey: "settings.regionOverrideCode") ?? ""
         languageCode = defaults.string(forKey: "settings.languageCode") ?? ""
     }
@@ -102,6 +133,7 @@ final class AppSettingsModel {
     private func save() {
         defaults.set(scanInterval, forKey: "settings.scanInterval")
         defaults.set(includeHiddenNetworks, forKey: "settings.includeHiddenNetworks")
+        defaults.set(appearanceMode.rawValue, forKey: "settings.appearanceMode")
         defaults.set(regionOverrideCode, forKey: "settings.regionOverrideCode")
     }
 

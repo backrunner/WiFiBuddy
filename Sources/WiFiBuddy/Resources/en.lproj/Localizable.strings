@@ -97,6 +97,11 @@
 "Settings" = "Settings";
 "Preferences" = "Preferences";
 "Tune scanning cadence and regulatory behavior for WiFiBuddy." = "Tune scanning cadence and regulatory behavior for WiFiBuddy.";
+"Appearance" = "Appearance";
+"Theme" = "Theme";
+"Follow System" = "Follow System";
+"Light" = "Light";
+"Dark" = "Dark";
 "Scanning" = "Scanning";
 "Scan Interval" = "Scan Interval";
 "How often WiFiBuddy re-scans nearby access points." = "How often WiFiBuddy re-scans nearby access points.";

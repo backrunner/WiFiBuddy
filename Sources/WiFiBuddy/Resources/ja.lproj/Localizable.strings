@@ -97,6 +97,11 @@
 "Settings" = "設定";
 "Preferences" = "環境設定";
 "Tune scanning cadence and regulatory behavior for WiFiBuddy." = "WiFiBuddy のスキャン間隔と規制動作を調整します。";
+"Appearance" = "外観";
+"Theme" = "テーマ";
+"Follow System" = "システム設定";
+"Light" = "ライト";
+"Dark" = "ダーク";
 "Scanning" = "スキャン";
 "Scan Interval" = "スキャン間隔";
 "How often WiFiBuddy re-scans nearby access points." = "WiFiBuddy が近くの AP を再スキャンする頻度です。";

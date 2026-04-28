@@ -22,6 +22,7 @@ struct WiFiBuddyApp: App {
                     regionPolicyService: regionPolicyService,
                     wifiScanService: wifiScanService
                 )
+                .preferredColorScheme(settings.appearanceMode.colorScheme)
                 .task {
                     guard !didBootstrap else { return }
                     didBootstrap = true
