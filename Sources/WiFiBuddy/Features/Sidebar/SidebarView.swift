@@ -582,9 +582,6 @@ private struct NetworkRowView: View {
                     RowChip(text: "Ch \(observation.channelNumber)")
                     RowChip(text: observation.channelWidth.label)
                     RowChip(text: observation.security.shortLabel)
-                    if observation.hasVisibleName == false {
-                        RowChip(text: "Hidden", tint: .orange)
-                    }
                 }
             }
 

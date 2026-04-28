@@ -160,6 +160,8 @@ extension View {
 /// layered regular-material surfaces on older systems. The emphasized variant is
 /// used for the sidebar where the panel holds scrolling content.
 private struct WiFiBuddyGlassPanel: ViewModifier {
+    @Environment(\.colorScheme) private var colorScheme
+
     let padding: CGFloat
     let emphasized: Bool
 
@@ -170,8 +172,13 @@ private struct WiFiBuddyGlassPanel: ViewModifier {
             // Glass is given a fairly opaque window-background tint so panels
             // don't mirror their neighbors. The inner specular highlight is
             // dampened by the tint color. Stroke stays hairline.
-            let tint = Color(nsColor: .windowBackgroundColor)
-                .opacity(emphasized ? 0.75 : 0.62)
+            let tint = if colorScheme == .dark {
+                Color(nsColor: .windowBackgroundColor)
+                    .opacity(emphasized ? 0.75 : 0.62)
+            } else {
+                Color.white
+                    .opacity(emphasized ? 0.88 : 0.80)
+            }
 
             return AnyView(
                 content
@@ -186,12 +193,19 @@ private struct WiFiBuddyGlassPanel: ViewModifier {
             )
         }
 
+        let panelFill = colorScheme == .dark
+            ? AnyShapeStyle(.regularMaterial)
+            : AnyShapeStyle(Color.white.opacity(emphasized ? 0.88 : 0.82))
+        let shadowColor = colorScheme == .dark
+            ? WiFiBuddyTokens.Surface.panelShadow.opacity(0.35)
+            : Color.black.opacity(0.025)
+
         return AnyView(
             content
                 .padding(padding)
                 .background(
                     shape
-                        .fill(.regularMaterial)
+                        .fill(panelFill)
                         .overlay {
                             shape.stroke(
                                 emphasized
@@ -201,10 +215,10 @@ private struct WiFiBuddyGlassPanel: ViewModifier {
                             )
                         }
                         .shadow(
-                            color: WiFiBuddyTokens.Surface.panelShadow.opacity(0.35),
-                            radius: 6,
+                            color: shadowColor,
+                            radius: colorScheme == .dark ? 6 : 3,
                             x: 0,
-                            y: 2
+                            y: colorScheme == .dark ? 2 : 1
                         )
                 )
         )
@@ -255,21 +269,25 @@ struct CenteredModuleStateView: View {
 }
 
 struct WiFiBuddyChromeBackground: View {
+    @Environment(\.colorScheme) private var colorScheme
+
     var body: some View {
         ZStack {
-            WiFiBuddyTokens.canvasGradient()
+            WiFiBuddyTokens.canvasGradient(for: colorScheme)
 
-            Circle()
-                .fill(WiFiBuddyTokens.bandColor(.band5GHz).opacity(0.04))
-                .frame(width: 520, height: 520)
-                .blur(radius: 80)
-                .offset(x: -360, y: -260)
+            if colorScheme == .dark {
+                Circle()
+                    .fill(WiFiBuddyTokens.bandColor(.band5GHz).opacity(0.04))
+                    .frame(width: 520, height: 520)
+                    .blur(radius: 80)
+                    .offset(x: -360, y: -260)
 
-            Circle()
-                .fill(WiFiBuddyTokens.bandColor(.band2GHz).opacity(0.03))
-                .frame(width: 460, height: 460)
-                .blur(radius: 84)
-                .offset(x: 360, y: 280)
+                Circle()
+                    .fill(WiFiBuddyTokens.bandColor(.band2GHz).opacity(0.03))
+                    .frame(width: 460, height: 460)
+                    .blur(radius: 84)
+                    .offset(x: 360, y: 280)
+            }
         }
         .ignoresSafeArea()
     }

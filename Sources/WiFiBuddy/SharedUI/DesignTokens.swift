@@ -92,13 +92,23 @@ enum WiFiBuddyTokens {
         return Color(hue: hue, saturation: saturation, brightness: brightness)
     }
 
-    static func canvasGradient() -> LinearGradient {
-        LinearGradient(
-            colors: [
+    static func canvasGradient(for colorScheme: ColorScheme) -> LinearGradient {
+        let colors: [Color] = if colorScheme == .dark {
+            [
                 Surface.canvasTop,
                 Surface.canvasBottom,
                 Surface.canvasTop.opacity(0.92)
-            ],
+            ]
+        } else {
+            [
+                Color(red: 0.998, green: 0.998, blue: 1.000),
+                Color(red: 0.990, green: 0.994, blue: 0.998),
+                Color.white.opacity(0.98)
+            ]
+        }
+
+        return LinearGradient(
+            colors: colors,
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )

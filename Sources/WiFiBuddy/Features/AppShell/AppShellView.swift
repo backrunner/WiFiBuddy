@@ -3,6 +3,7 @@ import SwiftUI
 struct AppShellView: View {
     @Environment(AppNavigationModel.self) private var navigation
     @Environment(WiFiScanService.self) private var wifiScanService
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
         @Bindable var navigation = navigation
@@ -27,7 +28,7 @@ struct AppShellView: View {
                     }
                 }
                 .padding(.horizontal, WiFiBuddyTokens.Spacing.regular)
-                .padding(.top, 22)
+                .padding(.top, detailTopPadding)
                 .padding(.bottom, WiFiBuddyTokens.Spacing.regular)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
@@ -73,6 +74,10 @@ struct AppShellView: View {
         .onDisappear {
             wifiScanService.stopMonitoring()
         }
+    }
+
+    private var detailTopPadding: CGFloat {
+        colorScheme == .light ? 34 : 22
     }
 
     private var detailEmptyState: DetailEmptyState? {
