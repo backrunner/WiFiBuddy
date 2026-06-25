@@ -6,7 +6,7 @@ ROOT=$(cd "$(dirname "$0")/.." && pwd)
 cd "$ROOT"
 
 APP_NAME=${APP_NAME:-WiFiBuddy}
-BUNDLE_ID=${BUNDLE_ID:-com.orchiliao.WiFiBuddy}
+BUNDLE_ID=${BUNDLE_ID:-com.alkinum.wifibuddy}
 MACOS_MIN_VERSION=${MACOS_MIN_VERSION:-14.0}
 APP_CATEGORY=${APP_CATEGORY:-public.app-category.utilities}
 APP_ICON_NAME=${APP_ICON_NAME:-AppIcon}
