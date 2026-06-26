@@ -1,0 +1,126 @@
+/* App */
+"WiFiBuddy" = "WiFiBuddy";
+
+/* Sidebar */
+"Nearby Wi-Fi" = "Wi-Fi cercano";
+"Visible" = "Visibles";
+"Named" = "Con nombre";
+"Starred" = "Favoritas";
+"Sort" = "Ordenar";
+"Change list sorting" = "Cambiar orden de la lista";
+"Sort By" = "Ordenar por";
+"Recommended" = "Recomendado";
+"Signal Strength" = "Intensidad de señal";
+"Name (A–Z)" = "Nombre (A-Z)";
+"Channel" = "Canal";
+"Region %@" = "Región %@";
+
+/* Network row */
+"Starred network" = "Red favorita";
+"Currently connected network" = "Red conectada actualmente";
+"Hidden" = "Oculta";
+"Ch %d" = "Canal %d";
+
+/* Signal Map */
+"Signal Map" = "Mapa de señal";
+"%d visible networks" = "%d redes visibles";
+"%d starred" = "%d favoritas";
+"All Bands" = "Todas las bandas";
+"No Visible Networks" = "No hay redes visibles";
+"Scan again or switch to another frequency filter." = "Vuelve a escanear o cambia a otro filtro de frecuencia.";
+"Signal Map Unavailable" = "Mapa de señal no disponible";
+"No Supported Channels" = "No hay canales compatibles";
+"This band isn't available for the current region or this scan didn't return any legal channels to plot." = "Esta banda no está disponible para la región actual o este escaneo no devolvió canales legales para trazar.";
+"Hover to preview a network, or click a curve to inspect it." = "Pasa el cursor para previsualizar una red, o haz clic en una curva para inspeccionarla.";
+"Starred networks use a gold outline, while the selected curve carries the strongest emphasis." = "Las redes favoritas usan un contorno dorado, mientras que la curva seleccionada tiene el mayor énfasis.";
+
+/* Inspector */
+"Select a Wi-Fi Network" = "Selecciona una red Wi-Fi";
+"Choose a network from the sidebar or click a signal curve to inspect its details." = "Elige una red en la barra lateral o haz clic en una curva de señal para inspeccionar sus detalles.";
+"Live Snapshot" = "Instantánea en vivo";
+"Network Details" = "Detalles de la red";
+"Observation" = "Observación";
+"Current Link" = "Enlace actual";
+"SSID available" = "SSID disponible";
+"SSID hidden" = "SSID oculto";
+"Starred" = "Favorita";
+"Owner" = "Propietario";
+"RSSI" = "RSSI";
+"Noise" = "Ruido";
+"SNR" = "SNR";
+"Center" = "Centro";
+"Width" = "Ancho";
+"Security" = "Seguridad";
+"PHY" = "PHY";
+"SSID" = "SSID";
+"MAC / BSSID" = "MAC / BSSID";
+"Band" = "Banda";
+"Center Frequency" = "Frecuencia central";
+"Channel Width" = "Ancho de canal";
+"PHY Modes" = "Modos PHY";
+"Country Code" = "Código de país";
+"IBSS" = "IBSS";
+"Yes" = "Sí";
+"No" = "No";
+"Unknown" = "Desconocido";
+"Unavailable" = "No disponible";
+"Beacon Interval" = "Intervalo de beacon";
+"Information Elements" = "Elementos de información";
+"Interface" = "Interfaz";
+"Transmit Rate" = "Velocidad de transmisión";
+
+/* Empty states */
+"Preparing Wi-Fi Analyzer" = "Preparando el analizador Wi-Fi";
+"WiFiBuddy is warming up the scanner and loading your current environment." = "WiFiBuddy está iniciando el escáner y cargando tu entorno actual.";
+"Scanning Nearby Networks" = "Escaneando redes cercanas";
+"The analyzer is collecting nearby channels and access points now." = "El analizador está recopilando canales y puntos de acceso cercanos.";
+"No Wi-Fi Interface" = "Sin interfaz Wi-Fi";
+"WiFiBuddy couldn't find a Wi-Fi interface on this Mac." = "WiFiBuddy no pudo encontrar una interfaz Wi-Fi en este Mac.";
+"Wi-Fi Is Turned Off" = "Wi-Fi está desactivado";
+"Turn Wi-Fi back on to populate the analyzer and inspector." = "Vuelve a activar Wi-Fi para llenar el analizador y el inspector.";
+"Scan Failed" = "Error de escaneo";
+"Run another scan or move to a location with nearby Wi-Fi activity." = "Ejecuta otro escaneo o muévete a un lugar con actividad Wi-Fi cercana.";
+
+/* Permission card */
+"Reveal Network Names" = "Mostrar nombres de red";
+"Refreshing Network Names" = "Actualizando nombres de red";
+"Location Access Needed" = "Se necesita acceso a la ubicación";
+"Location Services Off" = "Servicios de ubicación desactivados";
+"Allow Access" = "Permitir acceso";
+"Open Settings" = "Abrir ajustes";
+"Refreshing…" = "Actualizando…";
+"Applying the new permission to the current scan." = "Aplicando el nuevo permiso al escaneo actual.";
+"Location access reveals SSID and BSSID." = "El acceso a la ubicación revela el SSID y el BSSID.";
+"WiFiBuddy rescans automatically after access changes." = "WiFiBuddy vuelve a escanear automáticamente después de cambios de acceso.";
+
+/* Settings */
+"Settings" = "Ajustes";
+"Preferences" = "Preferencias";
+"Tune scanning cadence and regulatory behavior for WiFiBuddy." = "Ajusta la cadencia de escaneo y el comportamiento regulatorio de WiFiBuddy.";
+"Appearance" = "Apariencia";
+"Theme" = "Tema";
+"Follow System" = "Seguir sistema";
+"Light" = "Claro";
+"Dark" = "Oscuro";
+"Scanning" = "Escaneo";
+"Scan Interval" = "Intervalo de escaneo";
+"How often WiFiBuddy re-scans nearby access points." = "Con qué frecuencia WiFiBuddy vuelve a escanear puntos de acceso cercanos.";
+"%d sec" = "%d s";
+"Include Hidden Networks" = "Incluir redes ocultas";
+"Show networks that don't broadcast an SSID." = "Mostrar redes que no transmiten un SSID.";
+"Region & Compliance" = "Región y cumplimiento";
+"Region Override" = "Anulación de región";
+"Automatic" = "Automático";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "Usa Automático salvo que necesites simular otro dominio regulatorio. WiFiBuddy sigue cruzando la política seleccionada con los canales compatibles con este Mac.";
+"Done" = "Listo";
+
+/* Toolbar */
+"Run a new Wi-Fi scan now" = "Ejecutar un nuevo escaneo Wi-Fi ahora";
+"Open WiFiBuddy settings" = "Abrir ajustes de WiFiBuddy";
+
+/* Language card */
+"Language" = "Idioma";
+"Display Language" = "Idioma de visualización";
+"Changes take effect the next time WiFiBuddy launches." = "Los cambios tendrán efecto la próxima vez que abras WiFiBuddy.";
+"System Default" = "Predeterminado del sistema";
+"English" = "Inglés";

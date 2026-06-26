@@ -1,0 +1,4 @@
+// Copy this file to Config/Signing.local.xcconfig if you want a local default
+// team for Xcode automatic signing. The local file is ignored by git.
+//
+// DEVELOPMENT_TEAM = TEAMID1234

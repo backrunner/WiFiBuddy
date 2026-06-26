@@ -111,7 +111,7 @@
 "Region & Compliance" = "区域与合规";
 "Region Override" = "区域覆盖";
 "Automatic" = "自动";
-"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "除非需要模拟其他监管区域，请使用"自动"。WiFiBuddy 仍会把所选策略与本机支持的信道取交集。";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "除非需要模拟其他监管区域，请使用\"自动\"。WiFiBuddy 仍会把所选策略与本机支持的信道取交集。";
 "Done" = "完成";
 
 /* Toolbar */

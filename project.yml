@@ -1,0 +1,42 @@
+name: WiFiBuddy
+options:
+  bundleIdPrefix: com.alkinum
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
+    SWIFT_VERSION: "6.0"
+configs:
+  Debug: debug
+  Release: release
+configFiles:
+  Debug: Config/Version.xcconfig
+  Release: Config/Version.xcconfig
+targets:
+  WiFiBuddy:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Sources/WiFiBuddy
+    settings:
+      base:
+        PRODUCT_NAME: WiFiBuddy
+        PRODUCT_BUNDLE_IDENTIFIER: com.alkinum.wifibuddy
+        INFOPLIST_FILE: Config/WiFiBuddy-Info.plist
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_ENTITLEMENTS: Config/AppStore.entitlements
+        ENABLE_HARDENED_RUNTIME: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+schemes:
+  WiFiBuddy:
+    build:
+      targets:
+        WiFiBuddy: all
+    run:
+      config: Debug
+    archive:
+      config: Release

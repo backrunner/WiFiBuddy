@@ -1,0 +1,126 @@
+/* App */
+"WiFiBuddy" = "WiFiBuddy";
+
+/* Sidebar */
+"Nearby Wi-Fi" = "WLAN in der Nähe";
+"Visible" = "Sichtbar";
+"Named" = "Benannt";
+"Starred" = "Favoriten";
+"Sort" = "Sortieren";
+"Change list sorting" = "Listensortierung ändern";
+"Sort By" = "Sortieren nach";
+"Recommended" = "Empfohlen";
+"Signal Strength" = "Signalstärke";
+"Name (A–Z)" = "Name (A-Z)";
+"Channel" = "Kanal";
+"Region %@" = "Region %@";
+
+/* Network row */
+"Starred network" = "Favorisiertes Netzwerk";
+"Currently connected network" = "Aktuell verbundenes Netzwerk";
+"Hidden" = "Ausgeblendet";
+"Ch %d" = "Kanal %d";
+
+/* Signal Map */
+"Signal Map" = "Signaldiagramm";
+"%d visible networks" = "%d sichtbare Netzwerke";
+"%d starred" = "%d Favoriten";
+"All Bands" = "Alle Bänder";
+"No Visible Networks" = "Keine sichtbaren Netzwerke";
+"Scan again or switch to another frequency filter." = "Erneut scannen oder zu einem anderen Frequenzfilter wechseln.";
+"Signal Map Unavailable" = "Signaldiagramm nicht verfügbar";
+"No Supported Channels" = "Keine unterstützten Kanäle";
+"This band isn't available for the current region or this scan didn't return any legal channels to plot." = "Dieses Band ist für die aktuelle Region nicht verfügbar, oder dieser Scan hat keine legalen Kanäle zum Darstellen zurückgegeben.";
+"Hover to preview a network, or click a curve to inspect it." = "Bewege den Zeiger über ein Netzwerk, um eine Vorschau anzuzeigen, oder klicke auf eine Kurve, um sie zu prüfen.";
+"Starred networks use a gold outline, while the selected curve carries the strongest emphasis." = "Favorisierte Netzwerke haben eine goldene Kontur, während die ausgewählte Kurve am stärksten hervorgehoben wird.";
+
+/* Inspector */
+"Select a Wi-Fi Network" = "WLAN-Netzwerk auswählen";
+"Choose a network from the sidebar or click a signal curve to inspect its details." = "Wähle ein Netzwerk in der Seitenleiste oder klicke auf eine Signalkurve, um Details zu prüfen.";
+"Live Snapshot" = "Live-Schnappschuss";
+"Network Details" = "Netzwerkdetails";
+"Observation" = "Beobachtung";
+"Current Link" = "Aktuelle Verbindung";
+"SSID available" = "SSID verfügbar";
+"SSID hidden" = "SSID ausgeblendet";
+"Starred" = "Favorit";
+"Owner" = "Besitzer";
+"RSSI" = "RSSI";
+"Noise" = "Rauschen";
+"SNR" = "SNR";
+"Center" = "Mitte";
+"Width" = "Breite";
+"Security" = "Sicherheit";
+"PHY" = "PHY";
+"SSID" = "SSID";
+"MAC / BSSID" = "MAC / BSSID";
+"Band" = "Band";
+"Center Frequency" = "Mittelfrequenz";
+"Channel Width" = "Kanalbreite";
+"PHY Modes" = "PHY-Modi";
+"Country Code" = "Ländercode";
+"IBSS" = "IBSS";
+"Yes" = "Ja";
+"No" = "Nein";
+"Unknown" = "Unbekannt";
+"Unavailable" = "Nicht verfügbar";
+"Beacon Interval" = "Beacon-Intervall";
+"Information Elements" = "Informationselemente";
+"Interface" = "Schnittstelle";
+"Transmit Rate" = "Übertragungsrate";
+
+/* Empty states */
+"Preparing Wi-Fi Analyzer" = "WLAN-Analyzer wird vorbereitet";
+"WiFiBuddy is warming up the scanner and loading your current environment." = "WiFiBuddy startet den Scanner und lädt deine aktuelle Umgebung.";
+"Scanning Nearby Networks" = "Nahegelegene Netzwerke werden gescannt";
+"The analyzer is collecting nearby channels and access points now." = "Der Analyzer sammelt jetzt nahegelegene Kanäle und Zugangspunkte.";
+"No Wi-Fi Interface" = "Keine WLAN-Schnittstelle";
+"WiFiBuddy couldn't find a Wi-Fi interface on this Mac." = "WiFiBuddy konnte auf diesem Mac keine WLAN-Schnittstelle finden.";
+"Wi-Fi Is Turned Off" = "WLAN ist ausgeschaltet";
+"Turn Wi-Fi back on to populate the analyzer and inspector." = "Schalte WLAN wieder ein, um Analyzer und Inspektor zu füllen.";
+"Scan Failed" = "Scan fehlgeschlagen";
+"Run another scan or move to a location with nearby Wi-Fi activity." = "Führe einen weiteren Scan aus oder gehe an einen Ort mit WLAN-Aktivität in der Nähe.";
+
+/* Permission card */
+"Reveal Network Names" = "Netzwerknamen anzeigen";
+"Refreshing Network Names" = "Netzwerknamen werden aktualisiert";
+"Location Access Needed" = "Standortzugriff erforderlich";
+"Location Services Off" = "Ortungsdienste aus";
+"Allow Access" = "Zugriff erlauben";
+"Open Settings" = "Einstellungen öffnen";
+"Refreshing…" = "Aktualisieren…";
+"Applying the new permission to the current scan." = "Die neue Berechtigung wird auf den aktuellen Scan angewendet.";
+"Location access reveals SSID and BSSID." = "Standortzugriff zeigt SSID und BSSID an.";
+"WiFiBuddy rescans automatically after access changes." = "WiFiBuddy scannt nach Zugriffsänderungen automatisch erneut.";
+
+/* Settings */
+"Settings" = "Einstellungen";
+"Preferences" = "Voreinstellungen";
+"Tune scanning cadence and regulatory behavior for WiFiBuddy." = "Scanintervall und regulatorisches Verhalten von WiFiBuddy anpassen.";
+"Appearance" = "Darstellung";
+"Theme" = "Design";
+"Follow System" = "System folgen";
+"Light" = "Hell";
+"Dark" = "Dunkel";
+"Scanning" = "Scannen";
+"Scan Interval" = "Scanintervall";
+"How often WiFiBuddy re-scans nearby access points." = "Wie oft WiFiBuddy nahegelegene Zugangspunkte erneut scannt.";
+"%d sec" = "%d Sek.";
+"Include Hidden Networks" = "Ausgeblendete Netzwerke einbeziehen";
+"Show networks that don't broadcast an SSID." = "Netzwerke anzeigen, die keine SSID senden.";
+"Region & Compliance" = "Region & Compliance";
+"Region Override" = "Regionsüberschreibung";
+"Automatic" = "Automatisch";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "Automatisch verwenden, außer du musst eine andere Regulierungsdomäne simulieren. WiFiBuddy schneidet die ausgewählte Richtlinie weiterhin mit den von diesem Mac unterstützten Kanälen.";
+"Done" = "Fertig";
+
+/* Toolbar */
+"Run a new Wi-Fi scan now" = "Jetzt neuen WLAN-Scan ausführen";
+"Open WiFiBuddy settings" = "WiFiBuddy-Einstellungen öffnen";
+
+/* Language card */
+"Language" = "Sprache";
+"Display Language" = "Anzeigesprache";
+"Changes take effect the next time WiFiBuddy launches." = "Änderungen werden beim nächsten Start von WiFiBuddy wirksam.";
+"System Default" = "Systemstandard";
+"English" = "Englisch";

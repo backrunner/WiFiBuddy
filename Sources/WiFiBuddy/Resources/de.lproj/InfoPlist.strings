@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "WiFiBuddy verwendet Standortzugriff, um WLAN-Metadaten wie SSID, BSSID und Ländercode zu lesen und regionsbezogene Kanalempfehlungen zu erstellen.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "WiFiBuddy lässt den Standortzugriff immer aktiviert, damit WLAN-Metadaten (SSID, BSSID und Ländercode) zwischen Scans verfügbar bleiben, ohne bei jedem Start erneut zu fragen.";
+"NSLocationUsageDescription" = "WiFiBuddy verwendet Standortzugriff, um WLAN-Metadaten wie SSID, BSSID und Ländercode für regionsbezogene Kanalempfehlungen zu lesen.";

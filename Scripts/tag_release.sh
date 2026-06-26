@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # Tag a WiFiBuddy release (or prerelease) by bumping version.env, creating a
-# commit, and cutting a signed-ish annotated tag. CI then picks up the tag and
-# produces the DMG + GitHub Release automatically.
+# commit, and cutting an annotated tag. CI then picks up the tag for quality
+# checks only; this repository no longer publishes GitHub DMG artifacts.
 #
 # Usage:
 #   Scripts/tag_release.sh 0.2.0              # cut a stable tag v0.2.0
@@ -13,7 +13,7 @@ set -euo pipefail
 # Conventions:
 #   - We follow SemVer 2.0. Anything with a "-" after the MAJOR.MINOR.PATCH
 #     piece (e.g. "-beta.1", "-rc.1", "-alpha.3") is treated as a prerelease
-#     by the release.yml workflow.
+#     by the CI workflow.
 #   - BUILD_NUMBER is auto-incremented each time this script runs.
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -54,15 +54,10 @@ if git rev-parse "$TAG" >/dev/null 2>&1; then
   exit 1
 fi
 
-# Bump version.env
-CURRENT_BUILD=$(grep -E '^BUILD_NUMBER=' version.env | cut -d= -f2)
-NEW_BUILD=$((CURRENT_BUILD + 1))
-cat > version.env <<EOF
-MARKETING_VERSION=$VERSION
-BUILD_NUMBER=$NEW_BUILD
-EOF
+Scripts/bump_build_number.sh --marketing-version "$VERSION"
+NEW_BUILD=$(grep -E '^BUILD_NUMBER=' version.env | cut -d= -f2)
 
-git add version.env
+git add version.env Config/Version.xcconfig
 git commit -m "release: $TAG"
 
 git tag -a "$TAG" -m "Release $TAG"
@@ -73,7 +68,7 @@ if [[ $PUSH -eq 1 ]]; then
   BRANCH=$(git symbolic-ref --short HEAD)
   git push origin "$BRANCH"
   git push origin "$TAG"
-  echo "Pushed $BRANCH and $TAG to origin. CI will build the DMG shortly."
+  echo "Pushed $BRANCH and $TAG to origin. CI will run quality checks on the tag."
 else
-  echo "Run 'git push origin HEAD $TAG' to trigger the release workflow."
+  echo "Run 'git push origin HEAD $TAG' to trigger the CI workflow."
 fi

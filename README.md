@@ -33,7 +33,7 @@ it shipped with the OS.
 | ⭐️ **Starred vs. Owner** | Distinguish networks you care about (starred) from the one you're currently connected to (owner) — both indicators coexist, never collide. |
 | 🔍 **Deep Network Detail** | RSSI, noise, SNR, center frequency, channel width, security, PHY modes, information elements — everything your OS exposes, laid out cleanly. |
 | 🎨 **Liquid Glass UI** | Translucent glass panels, soft radial blooms, tinted rims, and rounded corners that hug macOS 26's design language. |
-| 🌏 **Multilingual** | Full UI available in English, 简体中文, 日本語, 한국어, and the language selector lives inside the app — no system restart required. |
+| 🌏 **Multilingual** | Full UI available in ten languages, including English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Italiano, and Português (Brasil). |
 | 🧪 **Zero-config scans** | Uses CoreWLAN + CoreLocation. Grant access once and WiFiBuddy keeps the list live without re-prompting. |
 
 ---
@@ -57,18 +57,10 @@ it shipped with the OS.
 
 ## 📥 Install
 
-### Download a pre-built DMG
+### Signed builds
 
-Grab the latest build from the [Releases page](../../releases).
-
-1. Double-click the downloaded `.dmg`
-2. Drag **WiFiBuddy** into **Applications**
-3. First launch: right-click the app → **Open** (the DMG is **not notarized**
-   — right-click Open tells Gatekeeper you trust it).
-
-> Prefer a stable build? Look for the release tagged `vX.Y.Z` and marked
-> "Latest". Testing a beta? Open any tag marked _Pre-release_, they're named
-> like `vX.Y.Z-beta.N`.
+WiFiBuddy is distributed through TestFlight and the App Store. This GitHub
+repository does not publish packaged DMGs.
 
 ### Build from source
 
@@ -81,7 +73,7 @@ cd WiFiBuddy
 # Fast inner loop: build and run the unsigned executable
 swift run
 
-# Or build a proper .app bundle and launch it
+# Or build the Xcode app target and launch it
 bash Scripts/package_app.sh release
 bash Scripts/launch.sh
 ```
@@ -133,38 +125,46 @@ All scripts live under `Scripts/`.
 
 | Script | What it does |
 | :-- | :-- |
-| `package_app.sh [release\|debug]` | Compiles and wraps the binary into a macOS `.app` bundle, regenerates the icon, signs ad-hoc. |
+| `generate_xcode_project.sh` | Regenerates `WiFiBuddy.xcodeproj` from `project.yml` with XcodeGen. |
+| `bump_build_number.sh [--set N] [--dry-run]` | Increments or sets `BUILD_NUMBER` in `version.env` and `Config/Version.xcconfig`. |
+| `package_app.sh [release\|debug]` | Builds the `WiFiBuddy` Xcode app target and copies the `.app` to `build/`. |
 | `launch.sh` | Opens the last built `.app`. |
-| `package_dmg.sh` | Builds the `.app` then produces a UDZO `.dmg` with an `/Applications` drop target. |
+| `package_dmg.sh` | Local-only helper that builds a UDZO `.dmg` with an `/Applications` drop target. |
+| `package_testflight.sh [check\|archive\|organizer\|export\|validate\|upload]` | Uses Xcode archive/export with automatic signing for Organizer, TestFlight, and App Store Connect. See [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) and [docs/APP_STORE_RELEASE.md](docs/APP_STORE_RELEASE.md). |
 | `generate_icon.swift <out.icns> [scratch]` | Pure-AppKit renderer for the Liquid Glass icon. Writes a full macOS iconset + `.icns`. |
-| `tag_release.sh <version> [--push]` | Bumps `version.env`, commits `release: vX.Y.Z`, and cuts an annotated git tag. |
+| `tag_release.sh <version> [--push]` | Bumps `version.env`, commits `release: vX.Y.Z`, and cuts an annotated git tag for CI validation. |
 
 ### Cutting a release
 
 ```bash
-# Cut a beta and let CI build + publish it
+# Cut a beta and let CI validate it
 bash Scripts/tag_release.sh 0.2.0-beta.1 --push
 
 # Promote to a stable release
 bash Scripts/tag_release.sh 0.2.0 --push
 ```
 
-The [release workflow](.github/workflows/release.yml) treats any tag
-containing `-` as a SemVer prerelease — those land on the Releases page as
-"Pre-release" and don't steal the "Latest" badge from stable builds.
+The CI workflow treats tags as validation checkpoints only. GitHub no longer
+publishes packaged DMGs from this repository.
 
 ---
 
 ## 🌐 Languages
 
-WiFiBuddy ships with four localized catalogs out of the box:
+WiFiBuddy ships with ten localized catalogs out of the box:
 
 | Code | Language |
 | :-- | :-- |
 | `en` | English |
 | `zh-Hans` | 简体中文 |
+| `zh-Hant` | 繁體中文 |
 | `ja` | 日本語 |
 | `ko` | 한국어 |
+| `es` | Español |
+| `fr` | Français |
+| `de` | Deutsch |
+| `it` | Italiano |
+| `pt-BR` | Português (Brasil) |
 
 Switch languages from **Settings → Language** — the change is scoped to
 WiFiBuddy only, no system-wide override. Restart the app to apply.
@@ -188,7 +188,7 @@ it the moment the app quits.
 ## 🤝 Contributing
 
 Pull requests are welcome. Please run `swift test` before submitting and
-keep new localized strings in sync across all four catalogs.
+keep new localized strings in sync across all localized catalogs.
 
 When filing a bug, a screenshot of the window and the output of
 `/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I`
@@ -198,4 +198,6 @@ are extremely helpful.
 
 ## 📄 License
 
-WiFiBuddy is released under the [MIT License](LICENSE).
+The source code is released under the [MIT License](LICENSE). The WiFiBuddy
+name, icon, screenshots, and other branding assets are reserved. See
+[docs/BRAND_ASSET_POLICY.md](docs/BRAND_ASSET_POLICY.md).

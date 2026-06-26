@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "WiFiBuddy uses location access to read Wi-Fi metadata such as SSID, BSSID, country code, and to generate region-aware channel recommendations.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "WiFiBuddy keeps location access always enabled so Wi-Fi metadata (SSID, BSSID, country code) stays available across scans without re-prompting you each launch.";
+"NSLocationUsageDescription" = "WiFiBuddy uses location access to read Wi-Fi metadata such as SSID, BSSID, and country code for region-aware channel recommendations.";

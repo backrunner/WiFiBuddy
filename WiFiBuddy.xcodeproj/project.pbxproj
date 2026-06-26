@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		053C7EBA24C2C893FBB82CF5 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79C6D6A5AAA6C53C51CECC1 /* DesignTokens.swift */; };
+		07AB78514EC86520B9BCC4DD /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105703C6466B788F6A33F88 /* FavoritesService.swift */; };
+		11456501E418CB5D873065B5 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63D95CE5C4A4DF3CBB2496 /* SidebarView.swift */; };
+		13EA2C7713B5A4960B8EDA95 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0592B181DA35B9743295C84 /* Formatters.swift */; };
+		1ADE3A43475CB6CBEB2E9B77 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F794232F1DEEB2B78B6BD /* SettingsView.swift */; };
+		1BC98868F6536906C9053F1D /* WiFiPermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474611B63526E71B992EEF0 /* WiFiPermissionService.swift */; };
+		24F775EFC987B1FA25C58CC8 /* AppShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC7175DA6DBD6E70D03EA22 /* AppShellView.swift */; };
+		2B289ECB2B26CF49CA367C9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A91D2EC600611EA8F9DE3A1C /* InfoPlist.strings */; };
+		582BB355A5D82B2BE3BCE436 /* WiFiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88DBB616FE2F4ED41135DB /* WiFiModels.swift */; };
+		77AB7C4F84838FC7B9D1F621 /* WiFiBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FA52B10388A93D41075B4 /* WiFiBuddyApp.swift */; };
+		7A1F7E23830310C8532F27C2 /* AppDependencyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DEAC030A4E79AF892DE73 /* AppDependencyGraph.swift */; };
+		7E0DD3A687E7E9E38C1BA81D /* region_policies.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B612806551A7DC6FECE675D /* region_policies.json */; };
+		7F2656A89DC0E3B6051C6E9A /* DefaultSelectionPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF3D955F2A8A313AD99B6D9 /* DefaultSelectionPolicy.swift */; };
+		865E8E7BA5FB7AF31709737E /* AnalyzerChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0EC7340263DFEB195E931 /* AnalyzerChartView.swift */; };
+		8A092AF8A1E822C1AC674FD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B32DAEDE0AAE51511DE6053 /* Localizable.strings */; };
+		97D215FE680BC35EB9EEABCD /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C60945977D1F860902F2A29 /* AppModels.swift */; };
+		9A72255A64D9E3809FAA4A6C /* RegionPolicyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5355B859AED9C58DD23D171 /* RegionPolicyService.swift */; };
+		B238D8DC3379252441ABA615 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C5AB36B96AA4CEC4F77C6 /* SharedComponents.swift */; };
+		C2FAD2DAED18D1255A8400AA /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4941EA288DF3538D360F61F4 /* AppIcon.icns */; };
+		CB9975D9B7C680D8B8807A26 /* RegionPolicyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353749EF3C75E99909EE007 /* RegionPolicyModels.swift */; };
+		F2A2CD29F456AAC9DBF46D11 /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E590923849A71A0E52C039 /* InspectorView.swift */; };
+		FF294C156CF6423987F5AB00 /* WiFiScanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4B6D195E3ECF7223F2021 /* WiFiScanService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0021E3323EC92BCD81E98379 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		0FBB555C1ABBDAD9F83E9D5A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BAD6FE1B8F463EC7F99CDAF /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
+		31130B0EBC57281EE3FAB39B /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3353749EF3C75E99909EE007 /* RegionPolicyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionPolicyModels.swift; sourceTree = "<group>"; };
+		3C60945977D1F860902F2A29 /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		401ED2DAE3866ECA67AEC7C8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4941EA288DF3538D360F61F4 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		4A63D95CE5C4A4DF3CBB2496 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		4BF57D99BE804CE6BA77CF6E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		572AA17F96DB7A932C39B999 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6474611B63526E71B992EEF0 /* WiFiPermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiPermissionService.swift; sourceTree = "<group>"; };
+		69BA17943528DFB7ADD2EE1B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		6B3DEAC030A4E79AF892DE73 /* AppDependencyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyGraph.swift; sourceTree = "<group>"; };
+		6C88DBB616FE2F4ED41135DB /* WiFiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiModels.swift; sourceTree = "<group>"; };
+		6D28F8E03AF8773F5394A8D6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6FF3D955F2A8A313AD99B6D9 /* DefaultSelectionPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSelectionPolicy.swift; sourceTree = "<group>"; };
+		783C1CEE6E7D2BA50AD32E05 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		812C5AB36B96AA4CEC4F77C6 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		8B612806551A7DC6FECE675D /* region_policies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = region_policies.json; sourceTree = "<group>"; };
+		8E474436D2F40BDBDB54324A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9105703C6466B788F6A33F88 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
+		9321FD93A9479269662D9358 /* WiFiBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B0EC7340263DFEB195E931 /* AnalyzerChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzerChartView.swift; sourceTree = "<group>"; };
+		9DC7175DA6DBD6E70D03EA22 /* AppShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShellView.swift; sourceTree = "<group>"; };
+		A0592B181DA35B9743295C84 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		B5D59C02E4736B442FF9E01C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B66671E856B59D6A2539DE76 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA8EDC75E006DF6228465B32 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5355B859AED9C58DD23D171 /* RegionPolicyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionPolicyService.swift; sourceTree = "<group>"; };
+		C53C80942560D08DA027B5D8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C92488950C3BF25F499D3AF3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CC346EC37CE21BA8D06113F9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D06F794232F1DEEB2B78B6BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D3E590923849A71A0E52C039 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
+		D79C6D6A5AAA6C53C51CECC1 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
+		DC3C9D386CB18A18CD20E00E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E10104A9C96143095EDA9022 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E32FA52B10388A93D41075B4 /* WiFiBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiBuddyApp.swift; sourceTree = "<group>"; };
+		E382EC7F7228FDD088F2DF69 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EFD676FFDE52E73EE2ED1FB0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4F4B6D195E3ECF7223F2021 /* WiFiScanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiScanService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00D9DF89EC08B4898F829B1E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				14243B032F51FB4B5D77E9FA /* AnalyzerChart */,
+				E7CD18D49D09A9EB159CD36B /* AppShell */,
+				A4476AFCC191CF25BE115F4C /* Inspector */,
+				B05D7CF031751BDFBA3EBCAF /* Settings */,
+				561F7A7C54D1A8BB9804E69E /* Sidebar */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		021C1A6378B6986BEE90F124 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1BAD6FE1B8F463EC7F99CDAF /* Version.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		027D8A5A0072FDB9572E1BB2 /* SharedUI */ = {
+			isa = PBXGroup;
+			children = (
+				D79C6D6A5AAA6C53C51CECC1 /* DesignTokens.swift */,
+				812C5AB36B96AA4CEC4F77C6 /* SharedComponents.swift */,
+			);
+			path = SharedUI;
+			sourceTree = "<group>";
+		};
+		10AEF0961E5DF2C36DE93C4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9321FD93A9479269662D9358 /* WiFiBuddy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14243B032F51FB4B5D77E9FA /* AnalyzerChart */ = {
+			isa = PBXGroup;
+			children = (
+				93B0EC7340263DFEB195E931 /* AnalyzerChartView.swift */,
+			);
+			path = AnalyzerChart;
+			sourceTree = "<group>";
+		};
+		155F14B3992E04FA6B64DFE9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F16AA24DD25E9414807EE453 /* WiFiBuddy */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5437B04223A141D53FDBD676 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9105703C6466B788F6A33F88 /* FavoritesService.swift */,
+				C5355B859AED9C58DD23D171 /* RegionPolicyService.swift */,
+				6474611B63526E71B992EEF0 /* WiFiPermissionService.swift */,
+				F4F4B6D195E3ECF7223F2021 /* WiFiScanService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		561F7A7C54D1A8BB9804E69E /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				4A63D95CE5C4A4DF3CBB2496 /* SidebarView.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		A4476AFCC191CF25BE115F4C /* Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				D3E590923849A71A0E52C039 /* InspectorView.swift */,
+			);
+			path = Inspector;
+			sourceTree = "<group>";
+		};
+		B05D7CF031751BDFBA3EBCAF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D06F794232F1DEEB2B78B6BD /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B11F605F61DF1B5F3435E42F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4941EA288DF3538D360F61F4 /* AppIcon.icns */,
+				8B612806551A7DC6FECE675D /* region_policies.json */,
+				A91D2EC600611EA8F9DE3A1C /* InfoPlist.strings */,
+				0B32DAEDE0AAE51511DE6053 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B98E736FE4EDE5925B660587 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				6FF3D955F2A8A313AD99B6D9 /* DefaultSelectionPolicy.swift */,
+				A0592B181DA35B9743295C84 /* Formatters.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C42F9FF9D303FD9ECBA67FC2 = {
+			isa = PBXGroup;
+			children = (
+				021C1A6378B6986BEE90F124 /* Config */,
+				155F14B3992E04FA6B64DFE9 /* Sources */,
+				10AEF0961E5DF2C36DE93C4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD507189B1A1E42417E46AA0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DEAC030A4E79AF892DE73 /* AppDependencyGraph.swift */,
+				3C60945977D1F860902F2A29 /* AppModels.swift */,
+				E32FA52B10388A93D41075B4 /* WiFiBuddyApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E7AB9916BBA5EEEA878120D1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3353749EF3C75E99909EE007 /* RegionPolicyModels.swift */,
+				6C88DBB616FE2F4ED41135DB /* WiFiModels.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E7CD18D49D09A9EB159CD36B /* AppShell */ = {
+			isa = PBXGroup;
+			children = (
+				9DC7175DA6DBD6E70D03EA22 /* AppShellView.swift */,
+			);
+			path = AppShell;
+			sourceTree = "<group>";
+		};
+		F16AA24DD25E9414807EE453 /* WiFiBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				CD507189B1A1E42417E46AA0 /* App */,
+				E7AB9916BBA5EEEA878120D1 /* Domain */,
+				00D9DF89EC08B4898F829B1E /* Features */,
+				B11F605F61DF1B5F3435E42F /* Resources */,
+				5437B04223A141D53FDBD676 /* Services */,
+				027D8A5A0072FDB9572E1BB2 /* SharedUI */,
+				B98E736FE4EDE5925B660587 /* Support */,
+			);
+			path = WiFiBuddy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51071B440F3B9F231A9AB938 /* WiFiBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9B8C56BD6772D1E2431C02B /* Build configuration list for PBXNativeTarget "WiFiBuddy" */;
+			buildPhases = (
+				44E9DA5432E31FD321636FBE /* Sources */,
+				47385E5D3DF78714D970B768 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiBuddy;
+			packageProductDependencies = (
+			);
+			productName = WiFiBuddy;
+			productReference = 9321FD93A9479269662D9358 /* WiFiBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E82989EA3A25FC691C9B6AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					51071B440F3B9F231A9AB938 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2BBFE428566B544B33F33EDF /* Build configuration list for PBXProject "WiFiBuddy" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				de,
+				en,
+				es,
+				fr,
+				it,
+				ja,
+				ko,
+				"pt-BR",
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = C42F9FF9D303FD9ECBA67FC2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 10AEF0961E5DF2C36DE93C4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51071B440F3B9F231A9AB938 /* WiFiBuddy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47385E5D3DF78714D970B768 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FAD2DAED18D1255A8400AA /* AppIcon.icns in Resources */,
+				2B289ECB2B26CF49CA367C9D /* InfoPlist.strings in Resources */,
+				8A092AF8A1E822C1AC674FD5 /* Localizable.strings in Resources */,
+				7E0DD3A687E7E9E38C1BA81D /* region_policies.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44E9DA5432E31FD321636FBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				865E8E7BA5FB7AF31709737E /* AnalyzerChartView.swift in Sources */,
+				7A1F7E23830310C8532F27C2 /* AppDependencyGraph.swift in Sources */,
+				97D215FE680BC35EB9EEABCD /* AppModels.swift in Sources */,
+				24F775EFC987B1FA25C58CC8 /* AppShellView.swift in Sources */,
+				7F2656A89DC0E3B6051C6E9A /* DefaultSelectionPolicy.swift in Sources */,
+				053C7EBA24C2C893FBB82CF5 /* DesignTokens.swift in Sources */,
+				07AB78514EC86520B9BCC4DD /* FavoritesService.swift in Sources */,
+				13EA2C7713B5A4960B8EDA95 /* Formatters.swift in Sources */,
+				F2A2CD29F456AAC9DBF46D11 /* InspectorView.swift in Sources */,
+				CB9975D9B7C680D8B8807A26 /* RegionPolicyModels.swift in Sources */,
+				9A72255A64D9E3809FAA4A6C /* RegionPolicyService.swift in Sources */,
+				1ADE3A43475CB6CBEB2E9B77 /* SettingsView.swift in Sources */,
+				B238D8DC3379252441ABA615 /* SharedComponents.swift in Sources */,
+				11456501E418CB5D873065B5 /* SidebarView.swift in Sources */,
+				77AB7C4F84838FC7B9D1F621 /* WiFiBuddyApp.swift in Sources */,
+				582BB355A5D82B2BE3BCE436 /* WiFiModels.swift in Sources */,
+				1BC98868F6536906C9053F1D /* WiFiPermissionService.swift in Sources */,
+				FF294C156CF6423987F5AB00 /* WiFiScanService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0B32DAEDE0AAE51511DE6053 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B66671E856B59D6A2539DE76 /* de */,
+				B5D59C02E4736B442FF9E01C /* en */,
+				DC3C9D386CB18A18CD20E00E /* es */,
+				572AA17F96DB7A932C39B999 /* fr */,
+				BA8EDC75E006DF6228465B32 /* it */,
+				CC346EC37CE21BA8D06113F9 /* ja */,
+				31130B0EBC57281EE3FAB39B /* ko */,
+				8E474436D2F40BDBDB54324A /* pt-BR */,
+				C92488950C3BF25F499D3AF3 /* zh-Hans */,
+				C53C80942560D08DA027B5D8 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A91D2EC600611EA8F9DE3A1C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				401ED2DAE3866ECA67AEC7C8 /* de */,
+				E10104A9C96143095EDA9022 /* en */,
+				0FBB555C1ABBDAD9F83E9D5A /* es */,
+				4BF57D99BE804CE6BA77CF6E /* fr */,
+				EFD676FFDE52E73EE2ED1FB0 /* it */,
+				783C1CEE6E7D2BA50AD32E05 /* ja */,
+				6D28F8E03AF8773F5394A8D6 /* ko */,
+				E382EC7F7228FDD088F2DF69 /* pt-BR */,
+				69BA17943528DFB7ADD2EE1B /* zh-Hans */,
+				0021E3323EC92BCD81E98379 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2496598BB693B457B84EB6AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/AppStore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Config/WiFiBuddy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alkinum.wifibuddy;
+				PRODUCT_NAME = WiFiBuddy;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6304D50BBB5A88B767100760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAD6FE1B8F463EC7F99CDAF /* Version.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		853D51989265A3B98AE88E01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/AppStore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Config/WiFiBuddy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alkinum.wifibuddy;
+				PRODUCT_NAME = WiFiBuddy;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E03A489A60632DC7BA0A567C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAD6FE1B8F463EC7F99CDAF /* Version.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BBFE428566B544B33F33EDF /* Build configuration list for PBXProject "WiFiBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6304D50BBB5A88B767100760 /* Debug */,
+				E03A489A60632DC7BA0A567C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A9B8C56BD6772D1E2431C02B /* Build configuration list for PBXNativeTarget "WiFiBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2496598BB693B457B84EB6AE /* Debug */,
+				853D51989265A3B98AE88E01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E82989EA3A25FC691C9B6AF /* Project object */;
+}

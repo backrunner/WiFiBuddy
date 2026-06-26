@@ -110,8 +110,8 @@ final class AppSettingsModel {
         didSet { save() }
     }
 
-    /// Empty string ("") means "follow system language"; otherwise a BCP-47
-    /// language tag like "en", "zh-Hans", "ja", "ko".
+    /// Empty string ("") means "follow system language"; otherwise a supported
+    /// BCP-47 language tag such as "en", "zh-Hans", "zh-Hant", or "pt-BR".
     var languageCode = "" {
         didSet { saveLanguage() }
     }

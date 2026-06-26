@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "WiFiBuddy は位置情報アクセスを使用して、SSID、BSSID、国コードなどの Wi-Fi メタデータを読み取り、地域に応じたチャネル推奨を生成します。";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "WiFiBuddy は位置情報アクセスを常に有効にして、Wi-Fi メタデータ（SSID、BSSID、国コード）をスキャン間で利用できるようにし、起動のたびに再確認しないようにします。";
+"NSLocationUsageDescription" = "WiFiBuddy は位置情報アクセスを使用して、SSID、BSSID、国コードなどの Wi-Fi メタデータを読み取り、地域に応じたチャネル推奨に利用します。";

@@ -143,18 +143,39 @@ struct SettingsView: View {
                 subtitle: "Changes take effect the next time WiFiBuddy launches."
             ) {
                 Picker("", selection: $settings.languageCode) {
-                    Text("System Default").tag("")
-                    Text("English").tag("en")
-                    Text("简体中文").tag("zh-Hans")
-                    Text("日本語").tag("ja")
-                    Text("한국어").tag("ko")
+                    ForEach(AppLanguageOption.supported) { option in
+                        Text(option.title).tag(option.code)
+                    }
                 }
                 .labelsHidden()
                 .pickerStyle(.menu)
                 .controlSize(.small)
-                .frame(maxWidth: 200)
+                .frame(maxWidth: 220)
             }
         }
+    }
+}
+
+private struct AppLanguageOption: Identifiable {
+    let code: String
+    let title: LocalizedStringKey
+
+    var id: String { code.isEmpty ? "system-default" : code }
+
+    static var supported: [AppLanguageOption] {
+        [
+            .init(code: "", title: "System Default"),
+            .init(code: "en", title: "English"),
+            .init(code: "zh-Hans", title: "简体中文"),
+            .init(code: "zh-Hant", title: "繁體中文"),
+            .init(code: "ja", title: "日本語"),
+            .init(code: "ko", title: "한국어"),
+            .init(code: "es", title: "Español"),
+            .init(code: "fr", title: "Français"),
+            .init(code: "de", title: "Deutsch"),
+            .init(code: "it", title: "Italiano"),
+            .init(code: "pt-BR", title: "Português (Brasil)")
+        ]
     }
 }
 

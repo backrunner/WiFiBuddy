@@ -1,0 +1,126 @@
+/* App */
+"WiFiBuddy" = "WiFiBuddy";
+
+/* Sidebar */
+"Nearby Wi-Fi" = "附近 Wi-Fi";
+"Visible" = "可見";
+"Named" = "已命名";
+"Starred" = "已加星號";
+"Sort" = "排序";
+"Change list sorting" = "變更列表排序";
+"Sort By" = "排序方式";
+"Recommended" = "建議";
+"Signal Strength" = "訊號強度";
+"Name (A–Z)" = "名稱 (A–Z)";
+"Channel" = "頻道";
+"Region %@" = "地區 %@";
+
+/* Network row */
+"Starred network" = "已加星號的網路";
+"Currently connected network" = "目前連線的網路";
+"Hidden" = "隱藏";
+"Ch %d" = "頻道 %d";
+
+/* Signal Map */
+"Signal Map" = "訊號圖";
+"%d visible networks" = "%d 個可見網路";
+"%d starred" = "%d 個已加星號";
+"All Bands" = "所有頻段";
+"No Visible Networks" = "沒有可見網路";
+"Scan again or switch to another frequency filter." = "重新掃描或切換到另一個頻段篩選器。";
+"Signal Map Unavailable" = "訊號圖無法使用";
+"No Supported Channels" = "沒有支援的頻道";
+"This band isn't available for the current region or this scan didn't return any legal channels to plot." = "此頻段不適用於目前地區，或此次掃描未返回任何可繪製的合法頻道。";
+"Hover to preview a network, or click a curve to inspect it." = "將游標移到網路上預覽，或點按曲線查看詳細資訊。";
+"Starred networks use a gold outline, while the selected curve carries the strongest emphasis." = "已加星號的網路會使用金色外框，選取的曲線則會以最強調樣式顯示。";
+
+/* Inspector */
+"Select a Wi-Fi Network" = "選取 Wi-Fi 網路";
+"Choose a network from the sidebar or click a signal curve to inspect its details." = "從側邊欄選擇網路，或點按訊號曲線查看詳細資訊。";
+"Live Snapshot" = "即時快照";
+"Network Details" = "網路詳情";
+"Observation" = "觀測";
+"Current Link" = "目前連線";
+"SSID available" = "SSID 可用";
+"SSID hidden" = "SSID 隱藏";
+"Starred" = "已加星號";
+"Owner" = "所屬";
+"RSSI" = "RSSI";
+"Noise" = "雜訊";
+"SNR" = "SNR";
+"Center" = "中心";
+"Width" = "寬度";
+"Security" = "安全性";
+"PHY" = "PHY";
+"SSID" = "SSID";
+"MAC / BSSID" = "MAC / BSSID";
+"Band" = "頻段";
+"Center Frequency" = "中心頻率";
+"Channel Width" = "頻道寬度";
+"PHY Modes" = "PHY 模式";
+"Country Code" = "國家/地區代碼";
+"IBSS" = "IBSS";
+"Yes" = "是";
+"No" = "否";
+"Unknown" = "未知";
+"Unavailable" = "無法使用";
+"Beacon Interval" = "Beacon 間隔";
+"Information Elements" = "資訊元素";
+"Interface" = "介面";
+"Transmit Rate" = "傳輸速率";
+
+/* Empty states */
+"Preparing Wi-Fi Analyzer" = "正在準備 Wi-Fi 分析器";
+"WiFiBuddy is warming up the scanner and loading your current environment." = "WiFiBuddy 正在啟動掃描器並載入目前環境。";
+"Scanning Nearby Networks" = "正在掃描附近網路";
+"The analyzer is collecting nearby channels and access points now." = "分析器正在收集附近的頻道與存取點。";
+"No Wi-Fi Interface" = "沒有 Wi-Fi 介面";
+"WiFiBuddy couldn't find a Wi-Fi interface on this Mac." = "WiFiBuddy 找不到這台 Mac 上的 Wi-Fi 介面。";
+"Wi-Fi Is Turned Off" = "Wi-Fi 已關閉";
+"Turn Wi-Fi back on to populate the analyzer and inspector." = "重新開啟 Wi-Fi 以填入分析器和檢查器。";
+"Scan Failed" = "掃描失敗";
+"Run another scan or move to a location with nearby Wi-Fi activity." = "再次掃描，或移到附近有 Wi-Fi 活動的位置。";
+
+/* Permission card */
+"Reveal Network Names" = "顯示網路名稱";
+"Refreshing Network Names" = "正在重新整理網路名稱";
+"Location Access Needed" = "需要位置存取權";
+"Location Services Off" = "定位服務已關閉";
+"Allow Access" = "允許存取";
+"Open Settings" = "開啟設定";
+"Refreshing…" = "正在重新整理…";
+"Applying the new permission to the current scan." = "正在將新權限套用到目前掃描。";
+"Location access reveals SSID and BSSID." = "位置存取權可顯示 SSID 和 BSSID。";
+"WiFiBuddy rescans automatically after access changes." = "存取權變更後，WiFiBuddy 會自動重新掃描。";
+
+/* Settings */
+"Settings" = "設定";
+"Preferences" = "偏好設定";
+"Tune scanning cadence and regulatory behavior for WiFiBuddy." = "調整 WiFiBuddy 的掃描頻率與法規行為。";
+"Appearance" = "外觀";
+"Theme" = "主題";
+"Follow System" = "跟隨系統";
+"Light" = "淺色";
+"Dark" = "深色";
+"Scanning" = "掃描";
+"Scan Interval" = "掃描間隔";
+"How often WiFiBuddy re-scans nearby access points." = "WiFiBuddy 重新掃描附近存取點的頻率。";
+"%d sec" = "%d 秒";
+"Include Hidden Networks" = "包含隱藏網路";
+"Show networks that don't broadcast an SSID." = "顯示未廣播 SSID 的網路。";
+"Region & Compliance" = "地區與合規";
+"Region Override" = "地區覆寫";
+"Automatic" = "自動";
+"Use Automatic unless you need to simulate another regulatory domain. WiFiBuddy still intersects the selected policy with this Mac's supported channels." = "除非需要模擬其他法規域，否則請使用自動。WiFiBuddy 仍會將所選政策與這台 Mac 支援的頻道取交集。";
+"Done" = "完成";
+
+/* Toolbar */
+"Run a new Wi-Fi scan now" = "立即執行新的 Wi-Fi 掃描";
+"Open WiFiBuddy settings" = "開啟 WiFiBuddy 設定";
+
+/* Language card */
+"Language" = "語言";
+"Display Language" = "顯示語言";
+"Changes take effect the next time WiFiBuddy launches." = "變更會在下次啟動 WiFiBuddy 時生效。";
+"System Default" = "系統預設";
+"English" = "英文";

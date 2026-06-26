@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "WiFiBuddy usa l’accesso alla posizione per leggere metadati Wi-Fi come SSID, BSSID e codice paese, e per generare consigli sui canali in base alla regione.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "WiFiBuddy mantiene sempre attivo l’accesso alla posizione così i metadati Wi-Fi (SSID, BSSID e codice paese) restano disponibili tra le scansioni senza richiedere di nuovo il permesso a ogni avvio.";
+"NSLocationUsageDescription" = "WiFiBuddy usa l’accesso alla posizione per leggere metadati Wi-Fi come SSID, BSSID e codice paese per consigli sui canali in base alla regione.";
