@@ -22,6 +22,7 @@
 		7F2656A89DC0E3B6051C6E9A /* DefaultSelectionPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF3D955F2A8A313AD99B6D9 /* DefaultSelectionPolicy.swift */; };
 		865E8E7BA5FB7AF31709737E /* AnalyzerChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0EC7340263DFEB195E931 /* AnalyzerChartView.swift */; };
 		8A092AF8A1E822C1AC674FD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B32DAEDE0AAE51511DE6053 /* Localizable.strings */; };
+		8A579D64EFC578BB4103A70F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66D9D75A87804FD41D06F5A /* Assets.xcassets */; };
 		97D215FE680BC35EB9EEABCD /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C60945977D1F860902F2A29 /* AppModels.swift */; };
 		9A72255A64D9E3809FAA4A6C /* RegionPolicyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5355B859AED9C58DD23D171 /* RegionPolicyService.swift */; };
 		B238D8DC3379252441ABA615 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C5AB36B96AA4CEC4F77C6 /* SharedComponents.swift */; };
@@ -67,6 +68,7 @@
 		CC346EC37CE21BA8D06113F9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D06F794232F1DEEB2B78B6BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D3E590923849A71A0E52C039 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
+		D66D9D75A87804FD41D06F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D79C6D6A5AAA6C53C51CECC1 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
 		DC3C9D386CB18A18CD20E00E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E10104A9C96143095EDA9022 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4941EA288DF3538D360F61F4 /* AppIcon.icns */,
+				D66D9D75A87804FD41D06F5A /* Assets.xcassets */,
 				8B612806551A7DC6FECE675D /* region_policies.json */,
 				A91D2EC600611EA8F9DE3A1C /* InfoPlist.strings */,
 				0B32DAEDE0AAE51511DE6053 /* Localizable.strings */,
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FAD2DAED18D1255A8400AA /* AppIcon.icns in Resources */,
+				8A579D64EFC578BB4103A70F /* Assets.xcassets in Resources */,
 				2B289ECB2B26CF49CA367C9D /* InfoPlist.strings in Resources */,
 				8A092AF8A1E822C1AC674FD5 /* Localizable.strings in Resources */,
 				7E0DD3A687E7E9E38C1BA81D /* region_policies.json in Resources */,
@@ -383,9 +387,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Config/AppStore.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = PB8H83VL3Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Config/WiFiBuddy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,9 +478,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Config/AppStore.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = PB8H83VL3Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Config/WiFiBuddy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

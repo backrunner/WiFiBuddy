@@ -96,7 +96,11 @@ bump_build_number() {
     bump_args+=(--marketing-version "$SET_MARKETING_VERSION")
   fi
 
-  "$ROOT/Scripts/bump_build_number.sh" "${bump_args[@]}"
+  if [[ "${#bump_args[@]}" -gt 0 ]]; then
+    "$ROOT/Scripts/bump_build_number.sh" "${bump_args[@]}"
+  else
+    "$ROOT/Scripts/bump_build_number.sh"
+  fi
   load_version_context
 }
 
