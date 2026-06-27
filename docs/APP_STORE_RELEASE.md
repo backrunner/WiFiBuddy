@@ -213,6 +213,10 @@ WiFiBuddy requests location permission because macOS gates SSID, BSSID, and
 country-code Wi-Fi metadata behind Core Location. Mention that clearly in App
 Review notes.
 
+Prepared App Store metadata, review notes, privacy answers, export compliance
+answers, and screenshot upload files are collected in
+[`docs/app-store/SUBMISSION_MATERIALS.md`](app-store/SUBMISSION_MATERIALS.md).
+
 ## TestFlight Release Flow
 
 Upload:

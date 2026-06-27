@@ -131,7 +131,7 @@ All scripts live under `Scripts/`.
 | `launch.sh` | Opens the last built `.app`. |
 | `package_dmg.sh` | Local-only helper that builds a UDZO `.dmg` with an `/Applications` drop target. |
 | `package_testflight.sh [check\|archive\|organizer\|export\|validate\|upload]` | Uses Xcode archive/export with automatic signing for Organizer, TestFlight, and App Store Connect. See [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) and [docs/APP_STORE_RELEASE.md](docs/APP_STORE_RELEASE.md). |
-| `generate_icon.swift <out.icns> [scratch]` | Pure-AppKit renderer for the Liquid Glass icon. Writes a full macOS iconset + `.icns`. |
+| `generate_app_store_screenshots.swift` | Renders the prepared macOS App Store screenshot set under `docs/app-store/screenshots/mac/`. |
 | `tag_release.sh <version> [--push]` | Bumps `version.env`, commits `release: vX.Y.Z`, and cuts an annotated git tag for CI validation. |
 
 ### Cutting a release

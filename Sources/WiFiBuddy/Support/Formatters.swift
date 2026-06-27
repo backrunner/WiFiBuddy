@@ -2,11 +2,11 @@ import Foundation
 
 enum WiFiBuddyFormatters {
     static func relativeString(for date: Date?) -> String {
-        guard let date else { return "N/A" }
+        guard let date else { return String(localized: "N/A") }
         let now = Date()
         let clampedDate = min(date, now)
         if now.timeIntervalSince(clampedDate) < 5 {
-            return "Just now"
+            return String(localized: "Just now")
         }
         let formatter = RelativeDateTimeFormatter()
         formatter.unitsStyle = .full
@@ -14,22 +14,22 @@ enum WiFiBuddyFormatters {
     }
 
     static func mbps(_ value: Double?) -> String {
-        guard let value else { return "N/A" }
-        return String(format: "%.1f Mbps", value)
+        guard let value else { return String(localized: "N/A") }
+        return String(format: String(localized: "%.1f Mbps"), value)
     }
 
     static func milliseconds(_ value: Double?) -> String {
-        guard let value else { return "N/A" }
-        return String(format: "%.1f ms", value)
+        guard let value else { return String(localized: "N/A") }
+        return String(format: String(localized: "%.1f ms"), value)
     }
 
     static func dbm(_ value: Int?) -> String {
-        guard let value else { return "N/A" }
-        return "\(value) dBm"
+        guard let value else { return String(localized: "N/A") }
+        return String(format: String(localized: "%d dBm"), value)
     }
 
     static func integer(_ value: Int?) -> String {
-        guard let value else { return "N/A" }
+        guard let value else { return String(localized: "N/A") }
         return "\(value)"
     }
 }

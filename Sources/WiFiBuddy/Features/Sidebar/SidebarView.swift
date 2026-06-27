@@ -60,7 +60,7 @@ struct SidebarView: View {
             LazyVStack(alignment: .leading, spacing: 16) {
                 ForEach(sectionModels) { section in
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(section.title)
+            section.title
                             .font(.caption.weight(.semibold))
                             .foregroundStyle(.secondary)
                             .textCase(.uppercase)
@@ -79,7 +79,7 @@ struct SidebarView: View {
                                     navigation.selectedNetworkID = observation.id
                                 }
                                 .contextMenu {
-                                    Button(favoritesService.containsPersistedFavorite(observation) ? "Remove Star" : "Star Network") {
+                                    Button(favoritesService.containsPersistedFavorite(observation) ? String(localized: "Remove Star") : String(localized: "Star Network")) {
                                         favoritesService.toggleFavorite(observation)
                                     }
 
@@ -183,16 +183,23 @@ struct SidebarView: View {
 
     private var headerSubtitle: String {
         if filteredObservations.isEmpty {
-            return "Listening for networks…"
+            return String(localized: "Listening for networks…")
         }
-        let counts = "\(filteredObservations.count) visible"
+        let counts = String.localizedStringWithFormat(
+            String(localized: "%d visible"),
+            filteredObservations.count
+        )
         if favoriteCount > 0 {
-            return "\(counts) • \(favoriteCount) starred"
+            let starred = String.localizedStringWithFormat(
+                String(localized: "%d starred"),
+                favoriteCount
+            )
+            return "\(counts) • \(starred)"
         }
         return counts
     }
 
-    private var permissionCardTitle: String {
+    private var permissionCardTitle: LocalizedStringKey {
         if isAwaitingPermissionRefresh {
             return "Refreshing Network Names"
         }
@@ -210,7 +217,7 @@ struct SidebarView: View {
         }
     }
 
-    private var permissionCardBody: String {
+    private var permissionCardBody: LocalizedStringKey {
         if isAwaitingPermissionRefresh {
             return "Applying the new permission to the current scan."
         }
@@ -243,7 +250,7 @@ struct SidebarView: View {
         }
     }
 
-    private var summaryLabelText: String {
+    private var summaryLabelText: LocalizedStringKey {
         if isAwaitingPermissionRefresh {
             return "Nearby metadata is updating now."
         }
@@ -278,7 +285,7 @@ struct SidebarView: View {
             .map { band, value in
                 return SidebarSectionModel(
                     id: band.rawValue,
-                    title: band.title,
+                    title: Text(verbatim: band.title),
                     observations: value.sorted { lhs, rhs in
                         compare(lhs, rhs, mode: sortMode)
                     }
@@ -402,7 +409,7 @@ struct SidebarView: View {
                     Spacer(minLength: 0)
                     RowChip(text: interfaceSummary.interfaceName)
                     if let code = interfaceSummary.countryCode {
-                        RowChip(text: "Region \(code)", tint: .teal)
+                        RowChip(text: String.localizedStringWithFormat(String(localized: "Region %@"), code), tint: .teal)
                     }
                 }
             }
@@ -432,7 +439,7 @@ struct SidebarView: View {
     private var bandFilterPicker: some View {
         Picker("Band", selection: bindingToSelectedBand) {
             ForEach(WiFiBandFilter.allCases) { filter in
-                Text(filter.rawValue).tag(filter)
+                Text(filter.title).tag(filter)
             }
         }
         .pickerStyle(.segmented)
@@ -539,7 +546,7 @@ struct SidebarView: View {
 
 private struct SidebarSectionModel: Identifiable {
     let id: String
-    let title: String
+    let title: Text
     let observations: [NetworkObservation]
 }
 
@@ -579,7 +586,7 @@ private struct NetworkRowView: View {
                 // and never truncated because chips simply wrap to the next
                 // line when the sidebar is narrow.
                 ChipFlowLayout(horizontalSpacing: 4, verticalSpacing: 4) {
-                    RowChip(text: "Ch \(observation.channelNumber)")
+                    RowChip(text: String.localizedStringWithFormat(String(localized: "Ch %d"), observation.channelNumber))
                     RowChip(text: observation.channelWidth.label)
                     RowChip(text: observation.security.shortLabel)
                 }
@@ -630,7 +637,7 @@ private struct NetworkRowView: View {
 }
 
 private struct SidebarOverviewValue: View {
-    let title: String
+    let title: LocalizedStringKey
     let value: String
     let tint: Color
 

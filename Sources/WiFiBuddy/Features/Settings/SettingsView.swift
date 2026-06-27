@@ -80,7 +80,7 @@ struct SettingsView: View {
         ) {
             SettingsRow(title: "Scan Interval") {
                 HStack(spacing: 8) {
-                    Text("\(Int(settings.scanInterval)) sec")
+                    Text(String.localizedStringWithFormat(String(localized: "%d sec"), Int(settings.scanInterval)))
                         .font(.callout.weight(.semibold))
                         .monospacedDigit()
                         .frame(minWidth: 58, alignment: .trailing)
@@ -118,7 +118,7 @@ struct SettingsView: View {
                 Picker("", selection: $settings.regionOverrideCode) {
                     Text("Automatic").tag("")
                     ForEach(regionPolicyService.allPolicies()) { policy in
-                        Text("\(policy.displayName) (\(policy.countryCode))")
+                        Text("\(policy.localizedDisplayName) (\(policy.countryCode))")
                             .tag(policy.countryCode)
                     }
                 }
@@ -182,7 +182,7 @@ private struct AppLanguageOption: Identifiable {
 private struct SettingsCard<Content: View>: View {
     @Environment(\.colorScheme) private var colorScheme
 
-    let title: String
+    let title: LocalizedStringKey
     let systemImage: String
     let tint: Color
     @ViewBuilder let content: Content
@@ -256,8 +256,8 @@ private struct SettingsCard<Content: View>: View {
 }
 
 private struct SettingsRow<Control: View>: View {
-    let title: String
-    var subtitle: String?
+    let title: LocalizedStringKey
+    var subtitle: LocalizedStringKey?
     @ViewBuilder let control: Control
 
     var body: some View {

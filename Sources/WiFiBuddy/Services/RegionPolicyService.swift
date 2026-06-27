@@ -39,7 +39,7 @@ final class RegionPolicyService {
     }
 
     func allPolicies() -> [RegionPolicy] {
-        document.policies.sorted { $0.displayName < $1.displayName }
+        document.policies.sorted { $0.localizedDisplayName < $1.localizedDisplayName }
     }
 
     private func loadFromBundle() {

@@ -22,6 +22,10 @@ struct RegionPolicy: Codable, Hashable, Sendable, Identifiable {
 
     var id: String { countryCode }
 
+    var localizedDisplayName: String {
+        NSLocalizedString(displayName, comment: "")
+    }
+
     func capability(for band: WiFiBand) -> BandCapability? {
         bands.first { $0.band == band }
     }

@@ -59,7 +59,7 @@ enum WiFiChannelWidth: Int, CaseIterable, Codable, Hashable, Sendable {
     var label: String {
         switch self {
         case .unknown:
-            "Unknown"
+            String(localized: "Unknown")
         case .mhz20:
             "20 MHz"
         case .mhz40:
@@ -112,7 +112,7 @@ enum WiFiSecurity: String, CaseIterable, Codable, Hashable, Sendable {
     var shortLabel: String {
         switch self {
         case .none:
-            "Open"
+            String(localized: "Open")
         case .wep:
             "WEP"
         case .wpa:
@@ -122,13 +122,13 @@ enum WiFiSecurity: String, CaseIterable, Codable, Hashable, Sendable {
         case .wpa3:
             "WPA3"
         case .mixed:
-            "Mixed"
+            String(localized: "Mixed")
         case .owe:
             "OWE"
         case .enterprise:
-            "Enterprise"
+            String(localized: "Enterprise")
         case .unknown:
-            "Unknown"
+            String(localized: "Unknown")
         }
     }
 }
@@ -173,7 +173,7 @@ struct NetworkObservation: Identifiable, Hashable, Codable, Sendable {
     }
 
     var displayName: String {
-        preferredSSID ?? bssid?.uppercased() ?? "Hidden Network"
+        preferredSSID ?? bssid?.uppercased() ?? String(localized: "Hidden Network")
     }
 
     var snr: Int? {
@@ -190,7 +190,7 @@ struct NetworkObservation: Identifiable, Hashable, Codable, Sendable {
     }
 
     var centerFrequencyLabel: String {
-        guard let centerFrequencyMHz else { return "Unknown" }
+        guard let centerFrequencyMHz else { return String(localized: "Unknown") }
         return "\(centerFrequencyMHz) MHz"
     }
 }
@@ -265,6 +265,15 @@ struct WiFiEnvironmentSnapshot: Hashable, Sendable {
         var copy = self
         copy.status = status
         return copy
+    }
+
+    var shouldShowTransientScanningState: Bool {
+        switch status {
+        case .idle, .scanning, .ready:
+            true
+        case .noInterface, .wifiDisabled, .failed:
+            observations.isEmpty == false || interfaceSummary != nil
+        }
     }
 }
 

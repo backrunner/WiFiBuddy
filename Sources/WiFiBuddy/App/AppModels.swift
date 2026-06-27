@@ -21,6 +21,15 @@ enum WiFiBandFilter: String, CaseIterable, Identifiable, Sendable {
             .band6GHz
         }
     }
+
+    var title: String {
+        switch self {
+        case .all:
+            String(localized: "All Bands")
+        case .band2GHz, .band5GHz, .band6GHz:
+            rawValue
+        }
+    }
 }
 
 enum WiFiSortMode: String, CaseIterable, Identifiable, Sendable {
@@ -33,10 +42,10 @@ enum WiFiSortMode: String, CaseIterable, Identifiable, Sendable {
 
     var title: String {
         switch self {
-        case .smart: "Recommended"
-        case .signal: "Signal Strength"
-        case .name: "Name (A–Z)"
-        case .channel: "Channel"
+        case .smart: String(localized: "Recommended")
+        case .signal: String(localized: "Signal Strength")
+        case .name: String(localized: "Name (A–Z)")
+        case .channel: String(localized: "Channel")
         }
     }
 
@@ -59,9 +68,9 @@ enum AppAppearanceMode: String, CaseIterable, Identifiable, Sendable {
 
     var title: String {
         switch self {
-        case .system: "Follow System"
-        case .light: "Light"
-        case .dark: "Dark"
+        case .system: String(localized: "Follow System")
+        case .light: String(localized: "Light")
+        case .dark: String(localized: "Dark")
         }
     }
 

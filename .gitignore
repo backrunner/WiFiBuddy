@@ -9,3 +9,5 @@ DerivedData/
 .netrc
 .agent
 Config/Signing.local.xcconfig
+docs/app-store/screenshots/
+docs/app-store/source/

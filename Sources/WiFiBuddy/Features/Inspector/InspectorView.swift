@@ -91,7 +91,7 @@ struct InspectorView: View {
                     }
 
                     MutedMetadataLine(items: [
-                        observation.hasVisibleName ? "SSID available" : "SSID hidden",
+                        observation.hasVisibleName ? String(localized: "SSID available") : String(localized: "SSID hidden"),
                         observation.countryCode ?? wifiScanService.snapshot.interfaceSummary?.countryCode ?? ""
                     ])
                 }
@@ -170,23 +170,23 @@ struct InspectorView: View {
         }
     }
 
-    private func identityRows(for observation: NetworkObservation) -> [(title: String, value: String)] {
+    private func identityRows(for observation: NetworkObservation) -> [(title: LocalizedStringKey, value: String)] {
         [
             ("SSID", observation.displayName),
-            ("MAC / BSSID", observation.bssid ?? "Unavailable"),
+            ("MAC / BSSID", observation.bssid ?? String(localized: "Unavailable")),
             ("Band", observation.band.title),
             ("Channel", "\(observation.channelNumber)"),
             ("Center Frequency", observation.centerFrequencyLabel),
             ("Channel Width", observation.channelWidth.label),
             ("Security", observation.security.shortLabel),
-            ("PHY Modes", observation.phyModes.map(\.rawValue).joined(separator: ", ").nilIfEmpty ?? "Unknown"),
-            ("Country Code", observation.countryCode ?? wifiScanService.snapshot.interfaceSummary?.countryCode ?? "Unavailable"),
-            ("IBSS", observation.isIBSS ? "Yes" : "No")
+            ("PHY Modes", observation.phyModes.map(\.rawValue).joined(separator: ", ").nilIfEmpty ?? String(localized: "Unknown")),
+            ("Country Code", observation.countryCode ?? wifiScanService.snapshot.interfaceSummary?.countryCode ?? String(localized: "Unavailable")),
+            ("IBSS", observation.isIBSS ? String(localized: "Yes") : String(localized: "No"))
         ]
     }
 
-    private func observationRows(for observation: NetworkObservation) -> [(title: String, value: String)] {
-        var rows: [(title: String, value: String)] = []
+    private func observationRows(for observation: NetworkObservation) -> [(title: LocalizedStringKey, value: String)] {
+        var rows: [(title: LocalizedStringKey, value: String)] = []
         if let beacon = observation.beaconInterval {
             rows.append(("Beacon Interval", WiFiBuddyFormatters.integer(beacon)))
         }
@@ -196,12 +196,12 @@ struct InspectorView: View {
         return rows
     }
 
-    private func currentConnectionRows(_ connection: CurrentConnection) -> [(title: String, value: String)] {
+    private func currentConnectionRows(_ connection: CurrentConnection) -> [(title: LocalizedStringKey, value: String)] {
         [
             ("Interface", connection.interfaceName),
-            ("SSID", connection.ssid?.nilIfEmpty ?? "Unavailable"),
-            ("MAC / BSSID", connection.bssid ?? "Unavailable"),
-            ("Channel", connection.channelNumber.map(String.init) ?? "Unavailable"),
+            ("SSID", connection.ssid?.nilIfEmpty ?? String(localized: "Unavailable")),
+            ("MAC / BSSID", connection.bssid ?? String(localized: "Unavailable")),
+            ("Channel", connection.channelNumber.map(String.init) ?? String(localized: "Unavailable")),
             ("Width", connection.channelWidth.label),
             ("RSSI", formatOptionalDbm(connection.rssi)),
             ("Noise", formatOptionalDbm(connection.noise)),
@@ -211,12 +211,12 @@ struct InspectorView: View {
     }
 
     private func formatOptionalDbm(_ value: Int?) -> String {
-        guard let value else { return "Unavailable" }
+        guard let value else { return String(localized: "Unavailable") }
         return WiFiBuddyFormatters.dbm(value)
     }
 
     private func formatOptionalInteger(_ value: Int?) -> String {
-        guard let value else { return "Unavailable" }
+        guard let value else { return String(localized: "Unavailable") }
         return WiFiBuddyFormatters.integer(value)
     }
 

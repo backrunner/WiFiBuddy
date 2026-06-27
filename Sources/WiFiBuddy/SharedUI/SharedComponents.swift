@@ -226,10 +226,34 @@ private struct WiFiBuddyGlassPanel: ViewModifier {
 }
 
 struct CenteredModuleStateView: View {
-    let title: String
-    let message: String
+    private let title: Text
+    private let message: Text
     let systemImage: String
     var showsProgress = false
+
+    init(
+        title: LocalizedStringKey,
+        message: LocalizedStringKey,
+        systemImage: String,
+        showsProgress: Bool = false
+    ) {
+        self.title = Text(title)
+        self.message = Text(message)
+        self.systemImage = systemImage
+        self.showsProgress = showsProgress
+    }
+
+    init(
+        title: LocalizedStringKey,
+        verbatimMessage: String,
+        systemImage: String,
+        showsProgress: Bool = false
+    ) {
+        self.title = Text(title)
+        self.message = Text(verbatim: verbatimMessage)
+        self.systemImage = systemImage
+        self.showsProgress = showsProgress
+    }
 
     var body: some View {
         GeometryReader { proxy in
@@ -244,9 +268,9 @@ struct CenteredModuleStateView: View {
                         .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
 
                     VStack(spacing: 4) {
-                        Text(title)
+                        title
                             .font(.headline.weight(.semibold))
-                        Text(message)
+                        message
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .multilineTextAlignment(.center)
@@ -294,7 +318,7 @@ struct WiFiBuddyChromeBackground: View {
 }
 
 struct MetricBadge: View {
-    let title: String
+    let title: LocalizedStringKey
     let value: String
     var systemImage: String?
     var tint: Color = .accentColor
@@ -347,7 +371,7 @@ struct BandBadge: View {
                 .fill(WiFiBuddyTokens.bandColor(band))
                 .frame(width: 6, height: 6)
 
-            Text(band?.title ?? "Unknown")
+            Text(band?.title ?? String(localized: "Unknown"))
                 .font(.caption.weight(.semibold))
         }
         .padding(.horizontal, 10)
@@ -412,7 +436,7 @@ struct VerticalMetricDivider: View {
 }
 
 struct SectionHeadline: View {
-    let title: String
+    let title: LocalizedStringKey
     var body: some View {
         Text(title)
             .font(.headline)
@@ -421,7 +445,7 @@ struct SectionHeadline: View {
 }
 
 struct KeyValueLine: View {
-    let title: String
+    let title: LocalizedStringKey
     let value: String
 
     var body: some View {
@@ -441,10 +465,10 @@ struct KeyValueLine: View {
 }
 
 struct SectionContainer<Content: View>: View {
-    let title: String
+    let title: LocalizedStringKey
     let content: Content
 
-    init(title: String, @ViewBuilder content: () -> Content) {
+    init(title: LocalizedStringKey, @ViewBuilder content: () -> Content) {
         self.title = title
         self.content = content()
     }

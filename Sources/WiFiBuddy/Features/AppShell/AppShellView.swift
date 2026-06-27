@@ -101,7 +101,7 @@ struct AppShellView: View {
         case .failed(let message):
             return DetailEmptyState(
                 title: "Scan Failed",
-                message: message,
+                verbatimMessage: message,
                 systemImage: "exclamationmark.triangle"
             )
         default:
@@ -145,10 +145,37 @@ private struct AdaptiveDetailLayout: View {
 }
 
 private struct DetailEmptyState {
-    let title: String
-    let message: String
+    let title: LocalizedStringKey
+    let message: LocalizedStringKey?
+    let verbatimMessage: String?
     let systemImage: String
     var showsProgress = false
+
+    init(
+        title: LocalizedStringKey,
+        message: LocalizedStringKey,
+        systemImage: String,
+        showsProgress: Bool = false
+    ) {
+        self.title = title
+        self.message = message
+        self.verbatimMessage = nil
+        self.systemImage = systemImage
+        self.showsProgress = showsProgress
+    }
+
+    init(
+        title: LocalizedStringKey,
+        verbatimMessage: String,
+        systemImage: String,
+        showsProgress: Bool = false
+    ) {
+        self.title = title
+        self.message = nil
+        self.verbatimMessage = verbatimMessage
+        self.systemImage = systemImage
+        self.showsProgress = showsProgress
+    }
 }
 
 private struct DetailEmptyStateView: View {
@@ -169,10 +196,17 @@ private struct DetailEmptyStateView: View {
                     VStack(spacing: 6) {
                         Text(state.title)
                             .font(.title3.weight(.semibold))
-                        Text(state.message)
-                            .font(.callout)
-                            .foregroundStyle(.secondary)
-                            .multilineTextAlignment(.center)
+                        if let message = state.message {
+                            Text(message)
+                                .font(.callout)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center)
+                        } else if let verbatimMessage = state.verbatimMessage {
+                            Text(verbatim: verbatimMessage)
+                                .font(.callout)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center)
+                        }
                     }
 
                     if state.showsProgress {

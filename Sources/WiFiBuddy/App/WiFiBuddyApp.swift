@@ -1,7 +1,9 @@
+import AppKit
 import SwiftUI
 
 @main
 struct WiFiBuddyApp: App {
+    @NSApplicationDelegateAdaptor(WiFiBuddyApplicationDelegate.self) private var appDelegate
     @Environment(\.scenePhase) private var scenePhase
     @State private var navigation = AppNavigationModel()
     @State private var settings = AppSettingsModel()
@@ -48,7 +50,7 @@ struct WiFiBuddyApp: App {
                     regionPolicyService.setRegionOverride(settings.regionOverride)
                 }
                 .onChange(of: scenePhase) { _, newPhase in
-                    guard newPhase == .active else { return }
+                    guard didBootstrap, newPhase == .active else { return }
                     permissionService.refresh()
                     Task {
                         await wifiScanService.refresh()
@@ -68,7 +70,12 @@ struct WiFiBuddyApp: App {
             scanInterval: settings.scanInterval,
             includeHidden: settings.includeHiddenNetworks
         )
-        await wifiScanService.refresh()
         await wifiScanService.startMonitoring()
+    }
+}
+
+final class WiFiBuddyApplicationDelegate: NSObject, NSApplicationDelegate {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        true
     }
 }

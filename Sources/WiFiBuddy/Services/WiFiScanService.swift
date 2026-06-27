@@ -1,6 +1,7 @@
 import CoreWLAN
 import Observation
 import Foundation
+import os
 
 @MainActor
 @Observable
@@ -40,7 +41,9 @@ final class WiFiScanService {
 
     func refresh() async {
         let previous = snapshot
-        snapshot = snapshot.updatingStatus(.scanning)
+        if previous.shouldShowTransientScanningState {
+            snapshot = previous.updatingStatus(.scanning)
+        }
 
         do {
             let result = try await Self.performScan(includeHidden: includeHiddenNetworks)
@@ -70,7 +73,8 @@ final class WiFiScanService {
     nonisolated private static func performScan(includeHidden: Bool) async throws -> WiFiEnvironmentSnapshot {
         try await Task.detached(priority: .utility) {
             let client = CWWiFiClient.shared()
-            guard let interface = client.interface() else {
+            guard let interface = preferredInterface(from: client) else {
+                debugLogScan("No Wi-Fi interface. interfaceNames=\(client.interfaceNames() ?? [])")
                 return WiFiEnvironmentSnapshot(
                     status: .noInterface,
                     interfaceSummary: nil,
@@ -81,6 +85,9 @@ final class WiFiScanService {
             }
 
             let interfaceSummary = mapInterfaceSummary(interface)
+            debugLogScan(
+                "Using Wi-Fi interface \(interfaceSummary.interfaceName), powerOn=\(interfaceSummary.powerOn), serviceActive=\(interfaceSummary.serviceActive)"
+            )
             let currentConnection = mapCurrentConnection(interface)
             guard interfaceSummary.powerOn else {
                 return WiFiEnvironmentSnapshot(
@@ -121,6 +128,20 @@ final class WiFiScanService {
             )
         }
         .value
+    }
+
+    nonisolated private static func preferredInterface(from client: CWWiFiClient) -> CWInterface? {
+        if let interface = client.interface() {
+            return interface
+        }
+
+        for name in client.interfaceNames() ?? [] {
+            if let interface = client.interface(withName: name) {
+                return interface
+            }
+        }
+
+        return nil
     }
 
     nonisolated private static func mapInterfaceSummary(_ interface: CWInterface) -> WiFiInterfaceSummary {
@@ -425,9 +446,15 @@ final class WiFiScanService {
     nonisolated private static func userFacingMessage(for error: Error) -> String {
         let nsError = error as NSError
         if nsError.domain == NSCocoaErrorDomain {
-            return "The Wi-Fi scan couldn't complete. Try again in a moment."
+            return String(localized: "The Wi-Fi scan couldn't complete. Try again in a moment.")
         }
         return nsError.localizedDescription
+    }
+
+    nonisolated private static func debugLogScan(_ message: String) {
+        #if DEBUG
+        Logger(subsystem: "com.alkinum.wifibuddy", category: "WiFiScan").info("\(message, privacy: .public)")
+        #endif
     }
 
     nonisolated private static func decodeSSID(_ string: String?) -> String? {

@@ -20,7 +20,7 @@ struct AnalyzerChartView: View {
                         Text(hoveredObservation.displayName)
                             .font(.subheadline.weight(.semibold))
                             .lineLimit(1)
-                        Text("Ch \(hoveredObservation.channelNumber) • \(hoveredObservation.centerFrequencyLabel) • \(WiFiBuddyFormatters.dbm(hoveredObservation.rssi))")
+                        Text(hoverMetadata(for: hoveredObservation))
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -44,7 +44,7 @@ struct AnalyzerChartView: View {
                 case .failed(let message):
                     CenteredModuleStateView(
                         title: "Signal Map Unavailable",
-                        message: message,
+                        verbatimMessage: message,
                         systemImage: "exclamationmark.triangle"
                     )
                 default:
@@ -72,8 +72,8 @@ struct AnalyzerChartView: View {
                 .font(.title2.weight(.semibold))
 
             MutedMetadataLine(items: [
-                "\(filteredObservations.count) visible networks",
-                favoriteCount > 0 ? "\(favoriteCount) starred" : "",
+                String.localizedStringWithFormat(String(localized: "%d visible networks"), filteredObservations.count),
+                favoriteCount > 0 ? String.localizedStringWithFormat(String(localized: "%d starred"), favoriteCount) : "",
                 activeBandLabel
             ])
         }
@@ -99,7 +99,7 @@ struct AnalyzerChartView: View {
     }
 
     private var activeBandLabel: String {
-        navigation.selectedBandFilter.band?.title ?? "All Bands"
+        navigation.selectedBandFilter.band?.title ?? String(localized: "All Bands")
     }
 
     private var chartContainer: some View {
@@ -156,9 +156,9 @@ struct AnalyzerChartView: View {
 
     private var chartFootnote: String {
         if favoriteCount > 0 {
-            return "Starred networks use a gold outline, while the selected curve carries the strongest emphasis."
+            return String(localized: "Starred networks use a gold outline, while the selected curve carries the strongest emphasis.")
         }
-        return "Hover to preview a network, or click a curve to inspect it."
+        return String(localized: "Hover to preview a network, or click a curve to inspect it.")
     }
 
     private func hoverOverlay(plot: AnalyzerPlotDescriptor, height: CGFloat) -> some View {
@@ -201,6 +201,11 @@ struct AnalyzerChartView: View {
             )
             .accessibilityLabel("Wi-Fi signal map")
             .accessibilityHint("Hover or click a curve to inspect a network")
+    }
+
+    private func hoverMetadata(for observation: NetworkObservation) -> String {
+        let channel = String.localizedStringWithFormat(String(localized: "Ch %d"), observation.channelNumber)
+        return "\(channel) • \(observation.centerFrequencyLabel) • \(WiFiBuddyFormatters.dbm(observation.rssi))"
     }
 
     private func drawBackground(into context: GraphicsContext, size: CGSize, plot: AnalyzerPlotDescriptor) {
